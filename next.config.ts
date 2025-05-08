@@ -1,7 +1,13 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  images: {
+    domains: [
+      'dev251.kodesolution.com',
+      'plus.unsplash.com',
+      'images.unsplash.com'
+    ] // 👈 Thêm domain ở đây
+  }
+}
 
-export default nextConfig;
+export default nextConfig
