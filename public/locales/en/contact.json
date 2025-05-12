@@ -1,0 +1,21 @@
+{
+  "title": "Contact",
+  "sub_title": "I want to hear from you",
+  "items": [
+    {
+      "label": "Address",
+      "value": "202 Dog Hill Lane Beloit, KS 67420",
+      "icon": "MapPin"
+    },
+    {
+      "label": "Phone",
+      "value": "+01589634755",
+      "icon": "Phone"
+    },
+    {
+      "label": "Email",
+      "value": "credesign@gmail.com",
+      "icon": "Mail"
+    }
+  ]
+}

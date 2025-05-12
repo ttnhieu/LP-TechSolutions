@@ -1,9 +1,13 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import '@/styles/globals.css'
+
+import '@/styles/tailwind.css'
 import ThemeProvider from '@/components/layout/theme-provider'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
+import BackToTopButton from '@/components/common/back-to-top-buton'
+import { I18nProvider } from '@/providers/i18n-provider'
+// import '@/lib/i18n'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -36,9 +40,14 @@ export default function RootLayout({
         >
           <div className="flex flex-col justify-between">
             <Header />
-            <main className="flex-1 min-h-screen">{children}</main>
+            <main className="flex-1 min-h-screen">
+              <I18nProvider>{children}</I18nProvider>
+              {/* {children} */}
+            </main>
             <Footer />
           </div>
+
+          <BackToTopButton />
         </ThemeProvider>
       </body>
     </html>

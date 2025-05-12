@@ -4,14 +4,18 @@
 
 @layer base {
   :root {
+    /* --background: 0 0% 100%; */
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
+
+    /* --primary: 0 0% 9%; */
     --primary-foreground: 0 0% 98%;
+    --primary: 255.57deg 97.88% 62.94%;
+    /* --primary-foreground: 255.57deg 97.88% 62.94% / 15%; */
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -29,16 +33,24 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    --shadow-1: 0px 6px 34px rgba(215, 216, 222, 0.41);
   }
   .dark {
-    --background: 0 0% 3.9%;
+    /* --background: 0 0% 3.9%; */
+    --background: 228.82deg 85.15% 5%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    /* --card: 0 0% 3.9%; */
+    --card: 222.33deg 49.39% 11.3%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+    /* --popover: 0 0% 3.9%; */
+    --popover: 222.33deg 49.39% 11.3%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+
+    /* --primary: 0 0% 98%;*/
+    /* --primary-foreground: 0 0% 9%; */
+    --primary-foreground: 0 0% 98%;
+    --primary: 255.57deg 97.88% 62.94%;
+    /* --primary-foreground: 255.57deg 97.88% 62.94% / 15%; */
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14.9%;
@@ -47,7 +59,8 @@
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
+    /* --border: 0 0% 14.9%; */
+    --border: 0deg 0% 100% / 10%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
@@ -55,6 +68,7 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --shadow-1: 0px 4px 52px 0px rgba(2, 5, 17, 0.15);
   }
 }
 
@@ -93,5 +107,112 @@
 
   .accordin-trigger:hover .lucide-chevron-down {
     @apply !text-white;
+  }
+
+  .dark .hero-bg-dark {
+    background: linear-gradient(
+        252deg,
+        rgba(25, 35, 53, 0) 35.97%,
+        rgba(47, 87, 239, 0.3) 100.98%
+      ),
+      linear-gradient(
+        110deg,
+        rgba(25, 35, 53, 0) 38.37%,
+        rgba(185, 102, 231, 0.4) 102.05%
+      );
+  }
+
+  .bg-gradient-1 {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.15),
+      rgba(251, 199, 226, 0.15),
+      rgba(220, 217, 254, 0.15)
+    );
+  }
+
+  .btn-effect-1 {
+    text-decoration: none;
+    transition: 0.4s;
+    position: relative;
+  }
+
+  .btn-effect-1::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: hsl(var(--primary));
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s;
+  }
+
+  .btn-effect-1:hover::before {
+    width: 100%;
+  }
+
+  .btn-effect-2 {
+    overflow: hidden;
+    position: relative;
+    will-change: box-shadow, color, transform, opacity, background;
+  }
+
+  .btn-effect-2:after,
+  .btn-effect-2:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    right: -50%;
+    left: -50%;
+    height: 0;
+    padding-bottom: 200%;
+    border-radius: 39%;
+    border: unset;
+    transition: transform 0s cubic-bezier(0.2, 0, 0.1, 1) 0.5s,
+      opacity 0.5s cubic-bezier(0.2, 0, 0.1, 1);
+    opacity: 0;
+  }
+  .btn-effect-2:before {
+    transform: translate3d(-10%, 4.8em, 0) rotate(330deg);
+    background: linear-gradient(25deg, #b270e0, rgba(150, 56, 216, 0));
+  }
+  .btn-effect-2:after {
+    transform: translate3d(10%, 4.8em, 0) rotate(0deg);
+    background: linear-gradient(
+      70deg,
+      rgba(150, 56, 216, 0.5),
+      rgba(124, 56, 216, 0)
+    );
+  }
+  .btn-effect-2:hover,
+  .btn-effect-2:focus {
+    transition: opacity 0.3s cubic-bezier(0.2, 0, 0.1, 1),
+      transform 0.3s cubic-bezier(0.2, 0, 0.1, 1), box-shadow 2s ease,
+      color 1.5s ease, background 1s ease 0.75s;
+    background: #b270e0;
+    box-shadow: inset 0 0 0 0.1em var(--primary),
+      0 0 1.75em rgba(150, 56, 216, 0.5);
+  }
+  .btn-effect-2:hover.outlined,
+  .btn-effect-2:focus.outlined {
+    color: white;
+  }
+  .btn-effect-2:hover:before,
+  .btn-effect-2:hover:after,
+  .btn-effect-2:focus:before,
+  .btn-effect-2:focus:after {
+    transition: transform 2s ease 0s, opacity 0.2s ease;
+    opacity: 1;
+  }
+  .btn-effect-2:hover:before,
+  .btn-effect-2:focus:before {
+    transform: translate3d(-10%, -1em, 0) rotate(100deg);
+  }
+  .btn-effect-2:hover:after,
+  .btn-effect-2:focus:after {
+    transform: translate3d(10%, -1em, 0) rotate(180deg);
   }
 }

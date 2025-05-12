@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
     domains: [
       'dev251.kodesolution.com',
       'plus.unsplash.com',
-      'images.unsplash.com'
+      'images.unsplash.com',
+      'elements-resized.envatousercontent.com',
+      'histudy.pixcelsthemes.com'
     ] // 👈 Thêm domain ở đây
   }
 }

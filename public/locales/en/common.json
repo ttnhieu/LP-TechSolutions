@@ -1,0 +1,9 @@
+{
+  "buttons": {
+    "get_started": "Get Started",
+    "get_started_today": "Get started today",
+    "watch_video": "Watch Video",
+    "send_message": "Send Message",
+    "learnMore": "Learn More"
+  }
+}

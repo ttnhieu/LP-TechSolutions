@@ -1,75 +1,51 @@
-export type SubMenuItemType = {
+export type MenuType = {
+  id: string
   title: string
-  url: string
 }
-type MenuSectionType = {
-  title: string
-  url?: string
-  id?: string
-  is_active: boolean
-  items: SubMenuItemType[]
-}
-const MENU: MenuSectionType[] = [
+
+export const MENU: MenuType[] = [
+  // {
+  //   id: 'hero',
+  //   title: 'Home',
+  // },
+  // {
+  //   id: 'skills',
+  //   title: 'Skills',
+  // },
   {
-    title: 'Home',
-    id: '#home',
-    is_active: false,
-    items: []
+    id: 'services',
+    title: 'Services'
   },
   {
-    title: 'Skills',
-    id: '#skills',
-    is_active: false,
-    items: []
+    id: 'about',
+    title: 'About'
   },
   {
-    title: 'Services',
-    id: '#services',
-    is_active: false,
-    items: []
+    id: 'optimazation',
+    title: 'Optimization'
   },
   {
-    title: 'Optimization',
-    id: '#optimization',
-    is_active: false,
-    items: []
+    id: 'portfolio',
+    title: 'Portfolio'
   },
   {
-    title: 'Portfolio',
-    id: '#portfolio',
-    is_active: false,
-    items: []
+    id: 'workflow',
+    title: 'Workflow'
   },
   {
-    title: 'Workflow',
-    id: '#workflow',
-    is_active: false,
-    items: []
+    id: 'testimonials',
+    title: 'Testimonials'
   },
   {
-    title: 'Testimonials',
-    id: '#testimonials',
-    is_active: false,
-    items: []
+    id: 'pricing',
+    title: 'Pricing'
   },
   {
-    title: 'Pricing',
-    id: '#pricing',
-    is_active: false,
-    items: []
+    id: 'faq',
+    title: 'FAQ'
   },
   {
-    title: 'Contact',
-    id: '#contact',
-    is_active: false,
-    items: []
-  },
-  {
-    title: 'FAQ',
-    id: '#faq',
-    is_active: false,
-    items: []
+    id: 'contact',
+    title: 'Contact'
   }
 ]
-
-export { MENU }

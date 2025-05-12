@@ -1,0 +1,9 @@
+@layer components {
+  .accordin-caret-hidden .lucide-chevron-down {
+    @apply hidden;
+  }
+
+  .accordin-trigger:hover .lucide-chevron-down {
+    @apply !text-white;
+  }
+}

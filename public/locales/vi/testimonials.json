@@ -1,0 +1,43 @@
+{
+  "title": "Cảm nhận khách hàng",
+  "sub_title": "Khách hàng nói gì về chúng tôi",
+  "description": "Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc.",
+  "items": [
+    {
+      "name": "Michael D",
+      "image_url": "https://histudy.pixcelsthemes.com/livepreview/histudy/assets/images/testimonial/client-01.png",
+      "job": "Trưởng phòng Marketing",
+      "content": "Dịch vụ ở đây thật tuyệt, nhân viên tận tình, chuyên nghiệp. Tôi rất khuyến khích bạn sử dụng dịch vụ tại đây."
+    },
+    {
+      "name": "Pearl B. Hill",
+      "image_url": "https://histudy.pixcelsthemes.com/livepreview/histudy/assets/images/testimonial/client-02.png",
+      "job": "CEO @ Google",
+      "content": "Tôi đã có một trải nghiệm tuyệt vời ở đây, dịch vụ của các bạn rất tốt, tôi rất hài lòng, sẽ tiếp tục sử dụng."
+    },
+    {
+      "name": "Valerie J. Creasman",
+      "image_url": "https://histudy.pixcelsthemes.com/livepreview/histudy/assets/images/testimonial/client-03.png",
+      "job": "Nhà thiết kế điều hành @ Google",
+      "content": "Dịch vụ của các bạn rất tốt, nhân viên tận tình, chuyên nghiệp, tôi rất hài lòng."
+    },
+    {
+      "name": "Hannah R. Sutton",
+      "image_url": "https://histudy.pixcelsthemes.com/livepreview/histudy/assets/images/testimonial/client-04.png",
+      "job": "Chủ tịch điều hành @ Facebook",
+      "content": "Tôi đã có một trải nghiệm tuyệt vời ở đây, dịch vụ của các bạn rất tốt, tôi rất hài lòng, sẽ tiếp tục sử dụng."
+    },
+    {
+      "name": "Valerie J. Creasman",
+      "image_url": "https://histudy.pixcelsthemes.com/livepreview/histudy/assets/images/testimonial/client-05.png",
+      "job": "Nhà thiết kế điều hành @ Google",
+      "content": "Dịch vụ ở đây thật tuyệt, nhân viên tận tình, chuyên nghiệp. Tôi rất khuyến khích bạn sử dụng dịch vụ tại đây."
+    },
+    {
+      "name": "Michael D. Lovelady",
+      "image_url": "https://histudy.pixcelsthemes.com/livepreview/histudy/assets/images/testimonial/client-06.png",
+      "job": "CEO @ Google",
+      "content": "Tôi đã có một trải nghiệm tuyệt vời ở đây, dịch vụ của các bạn rất tốt, tôi rất hài lòng, sẽ tiếp tục sử dụng."
+    }
+  ]
+}

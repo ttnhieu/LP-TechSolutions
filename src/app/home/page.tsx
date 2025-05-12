@@ -1,19 +1,27 @@
 import AboutSection from './(components)/about'
-import BlogsSection from './(components)/blogs'
 import HeroSection from './(components)/hero'
-import LatestSection from './(components)/latest'
-import SpecialOfferSection from './(components)/special-offer'
+import PortfolioSection from './(components)/portfolio'
+import OptimazationsSection from './(components)/optimazations'
+import ServicesSection from './(components)/services'
 import TestimonialsSection from './(components)/testimonials'
+import PricingSection from './(components)/pricing'
+import WorkflowSection from './(components)/workflow'
+import ContactSection from './(components)/contact'
+import FaqsSection from './(components)/faqs'
 
 function HomePage() {
   return (
     <>
       <HeroSection />
-      <SpecialOfferSection />
+      <ServicesSection />
       <AboutSection />
-      <LatestSection />
+      <OptimazationsSection />
+      <PortfolioSection />
+      <WorkflowSection />
       <TestimonialsSection />
-      <BlogsSection />
+      <PricingSection />
+      <FaqsSection />
+      <ContactSection />
     </>
   )
 }

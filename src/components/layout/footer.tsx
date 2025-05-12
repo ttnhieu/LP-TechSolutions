@@ -1,10 +1,68 @@
 import { Globe, Phone } from 'lucide-react'
+import LogoImage from '../common/logo-image'
 
 function Footer() {
   return (
-    <footer className="border-t border-gray-100 dark:border-white/20">
-      <div className="container px-4 m-auto">
+    <footer className="border-t border-gray-100 dark:border-white/20 relative overflow-hidden">
+      {/* <div className="gradient-shadow-top"></div>
+      <div className="gradient-shadow-bottom"></div> */}
+      <div className="container">
         <div className="grid md:grid-cols-4 grid-cols-2 gap-6 my-6">
+          <div className="flex flex-col gap-3">
+            <LogoImage />
+
+            <div className="text-default-600">
+              <a href="javascript:void(0);">(+123) 456 789 123</a>
+            </div>
+            <div className="text-default-600">
+              <a href="javascript:void(0);">example@mail.com</a>
+            </div>
+            <div className="flex items-center gap-4 mt-4">
+              <a href="#!" className="cursor-pointer">
+                <Phone />
+              </a>
+              <a href="#!" className="cursor-pointer">
+                <Globe />
+              </a>
+              <a href="#!" className="cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  data-lucide="instagram"
+                  className="lucide lucide-instagram h-6 w-6 transition-all text-default-600 hover:text-primary"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#!" className="cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  data-lucide="twitter"
+                  className="lucide lucide-twitter h-6 w-6 transition-all text-default-600 hover:text-primary"
+                >
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
           <div className="flex flex-col gap-3">
             <h5 className="mb-3 font-semibold text-default-950">About</h5>
             <div className="text-default-600">
@@ -58,69 +116,14 @@ function Footer() {
               <a href="javascript:void(0);">Accessibility</a>
             </div>
           </div>
-
-          <div className="flex flex-col gap-3">
-            <h5 className="mb-3 font-semibold text-default-950">
-              Get in touch
-            </h5>
-            <div className="text-default-600">
-              <a href="javascript:void(0);">(+123) 456 789 123</a>
-            </div>
-            <div className="text-default-600">
-              <a href="javascript:void(0);">example@mail.com</a>
-            </div>
-            <div className="flex items-center gap-4">
-              <a href="#!" className="cursor-pointer">
-                <Phone />
-              </a>
-              <a href="#!" className="cursor-pointer">
-                <Globe />
-              </a>
-              <a href="#!" className="cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  data-lucide="instagram"
-                  className="lucide lucide-instagram h-6 w-6 transition-all text-default-600 hover:text-primary"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                </svg>
-              </a>
-              <a href="#!" className="cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  data-lucide="twitter"
-                  className="lucide lucide-twitter h-6 w-6 transition-all text-default-600 hover:text-primary"
-                >
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
         </div>
+
         <div className="py-6 border-t border-gray-100 dark:border-white/20 lg:flex hidden">
           <div className="container px-4 m-auto">
             <div className="grid lg:grid-cols-2 items-center gap-6">
               <div>
                 <p className="text-default-600">
-                  2025 Design crafted{' '}
+                  2025 Design crafted
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

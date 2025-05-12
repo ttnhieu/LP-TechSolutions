@@ -1,0 +1,43 @@
+{
+  "title": "My services",
+  "sub_title": "Services I offer",
+  "items": [
+    {
+      "id": "services",
+      "title": "Services"
+    },
+    {
+      "id": "about",
+      "title": "About"
+    },
+    {
+      "id": "optimazation",
+      "title": "Optimization"
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio"
+    },
+    {
+      "id": "workflow",
+      "title": "Workflow"
+    },
+    {
+      "id": "testimonials",
+      "title": "Testimonials"
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing"
+    },
+    {
+      "id": "faq",
+      "title": "FAQ"
+    },
+    {
+      "id": "contact",
+      "title": "Contact"
+    }
+  ]
+}
+
