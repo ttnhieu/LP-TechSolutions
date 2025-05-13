@@ -7,7 +7,7 @@ function Footer() {
       {/* <div className="gradient-shadow-top"></div>
       <div className="gradient-shadow-bottom"></div> */}
       <div className="container">
-        <div className="grid md:grid-cols-4 grid-cols-2 gap-6 my-6">
+        <div className="grid grid-cols-2 md:grid-cols-4  gap-6 my-6">
           <div className="flex flex-col gap-3">
             <LogoImage />
 

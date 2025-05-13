@@ -24,7 +24,7 @@ function WorkflowSection() {
             {t('title')}
             <Wind className="size-5" />
           </span>
-          <Reveal effect="fadeInUp" once={false}>
+          <Reveal effect="fadeInUp" once={true}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold ">
               {t('sub_title')}
             </h2>

@@ -22,7 +22,7 @@ function HeroSection() {
         <div className="container relative z-2">
           <div className="relative isolate grid grid-cols-12 gap-6 lg:gap-8 pt-4 md:pt-[5rem] pb-2 md:pb-[5rem] overflow-hidden">
             <div className="col-span-12 md:col-span-7 flex flex-col gap-4">
-              <Reveal effect="fadeInDown" once={false}>
+              <Reveal effect="fadeInDown" once={true}>
                 <div className="flex w-fit relative bg-primary/20 dark:bg-primary/30 rounded-full text-sm xl:text-md">
                   <div className="intro-sub_title flex items-center justify-between gap-2 p-1.5">
                     <span className="bg-white dark:bg-primary rounded-full px-3 py-1 font-medium">
@@ -44,24 +44,24 @@ function HeroSection() {
               </Reveal>
 
               <div className="">
-                <Reveal effect="fadeInLeft" once={false} duration={0.8}>
+                <Reveal effect="fadeInLeft" once={true} duration={0.8}>
                   <h1 className="font-semibold tracking-tight text-foreground text-4xl xl:text-7xl">
                     {tHero('title')}
                   </h1>
                 </Reveal>
-                <Reveal effect="fadeInLeft" once={false} delay={0.3}>
+                <Reveal effect="fadeInLeft" once={true} delay={0.3}>
                   <p className="mt-8 font-medium text-foreground/80 xl:text-lg/8">
                     {tHero('content')}
                   </p>
                 </Reveal>
 
                 <div className="mt-10 mb-4 md:pb-[5rem] flex items-center justify-center sm:justify-start gap-x-4 md:gap-x-6">
-                  <Reveal effect="fadeInUp" once={false} delay={0.1}>
+                  <Reveal effect="fadeInUp" once={true} delay={0.1}>
                     <Button className="h-10 sm:h-[3rem] px-4 md:px-8 rounded-full cursor-pointer text-md btn-effect-2">
                       {tCommon('buttons.get_started')} <MoveRight />
                     </Button>
                   </Reveal>
-                  <Reveal effect="fadeInUp" once={false} delay={0.2}>
+                  <Reveal effect="fadeInUp" once={true} delay={0.2}>
                     <Button
                       className="h-10 sm:h-[3rem] px-4 md:px-8 rounded-full cursor-pointer text-md btn-effect-2 text-primary border-primary btn-outlined bg-transparent"
                       variant="outline"
@@ -95,7 +95,7 @@ function HeroSection() {
                   />
                 </div>
 
-                <Reveal effect="fadeInRight" once={false}>
+                <Reveal effect="fadeInRight" once={true}>
                   <Image
                     alt="Blog"
                     width={0}

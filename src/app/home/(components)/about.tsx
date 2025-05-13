@@ -54,19 +54,19 @@ function AboutSection() {
               <Wind className="size-5" />
             </span>
 
-            <Reveal effect="fadeInRight" once={false}>
+            <Reveal effect="fadeInRight" once={true}>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
                 {t('sub_title')}
               </h2>
             </Reveal>
 
-            <Reveal effect="fadeInRight" once={false} delay={0.1}>
+            <Reveal effect="fadeInRight" once={true} delay={0.1}>
               <p className="mt-6 text-xl text-foreground/50 text-left">
                 {t('content')}
               </p>
             </Reveal>
 
-            <Reveal effect="fadeInRight" once={false} delay={0.2}>
+            <Reveal effect="fadeInRight" once={true} delay={0.2}>
               <div className="mt-8 text-xl">
                 {Array.isArray(aboutInfoList) &&
                   aboutInfoList.map((item, index) => (

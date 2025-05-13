@@ -26,7 +26,7 @@ export const StaggerContainer = ({
     initial="hidden" // Trạng thái ban đầu của animation.
     whileInView="show" // Khi phần tử xuất hiện trong vùng nhìn thấy của viewport, sẽ chuyển sang trạng thái show.
     viewport={{
-      once: false, // once: true: animation chỉ xảy ra một lần duy nhất, không lặp lại khi scroll ra vào.
+      once: true, // once: true: animation chỉ xảy ra một lần duy nhất, không lặp lại khi scroll ra vào.
       amount: 0.15 // chỉ cần 15% chiều cao phần tử nằm trong viewport là animation được kích hoạt.
     }}
   >

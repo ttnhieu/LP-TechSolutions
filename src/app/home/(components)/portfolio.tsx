@@ -8,9 +8,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Reveal from '@/components/animations/reveal'
 import LightBox from '@/components/gallery/lightbox'
 
-import { cn } from '@/lib/utils'
 import { GalleryInterface } from '@/shared/interfaces/Gallery'
 import { PorfolioInterface } from '@/shared/interfaces/Porfolio'
+import { cn } from '@/lib/utils'
 
 interface TabInterface {
   label: string
@@ -19,10 +19,9 @@ interface TabInterface {
 
 function PortfolioSection() {
   const { t } = useTranslation('portfolio')
-  const [selectedType, setSelectedType] = useState<string>('all')
-  // Gallery
   const [open, setOpen] = useState(false)
   const [slides, setSlides] = useState<GalleryInterface[]>([])
+  const [selectedType, setSelectedType] = useState<string>('all')
 
   const items = t('items', { returnObjects: true }) as PorfolioInterface[]
   const tabs = t('tabs', { returnObjects: true }) as {
@@ -48,7 +47,6 @@ function PortfolioSection() {
     setSlides(selected.gallery)
     setOpen(true)
   }
-
   return (
     <section id="portfolio" className="py-5 md:py-10 relative overflow-hidden">
       <div className="container relative">
@@ -91,7 +89,6 @@ function PortfolioSection() {
             </ul>
           </div>
         </div>
-
         <AnimatePresence>
           <motion.div
             key={selectedType}
@@ -121,7 +118,6 @@ function PortfolioSection() {
                    * > 1024px Ảnh chiếm 1/3 chiều rộng viewport → 33vw (vì lưới lg:grid-cols-3).
                    */
                 />
-
                 <div className="portfolio-card-overlay w-full absolute top-0 h-0 invisible bg-[#070b106e] group-hover:h-full group-hover:visible transition-all duration-500"></div>
                 <div className="absolute left-1/2 -translate-x-1/2 -bottom-[10rem] invisible px-4 sm:px-6 py-4 rounded-lg bg-primary/50 backdrop-blur-sm w-[15rem]  group-hover:bottom-[20px] group-hover:visible transition-all duration-500">
                   <span className="text-white/90 text-sm">

@@ -69,7 +69,7 @@ function ContactSection() {
             {t('title')}
             <Wind className="size-5" />
           </span>
-          <Reveal effect="fadeInUp" once={false}>
+          <Reveal effect="fadeInUp" once={true}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
               {t('sub_title')}
             </h2>
@@ -78,7 +78,7 @@ function ContactSection() {
 
         <div className="mx-auto max-w-lg lg:max-w-4xl pt-10 md:pt-15 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 justify-between">
-            <Reveal effect="fadeInLeft" once={false}>
+            <Reveal effect="fadeInLeft" once={true}>
               <Form {...form}>
                 <form
                   onSubmit={form.handleSubmit(onSubmit)}

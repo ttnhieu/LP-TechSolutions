@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 function LogoImage() {
   return (
-    <Link href="/" className="w-fit">
+    <Link href="/" className="block w-[6rem] sm:w-[8rem]">
       <span className="sr-only">Your Company</span>
 
       <Image
@@ -12,7 +12,7 @@ function LogoImage() {
         width={0}
         height={0}
         sizes="100vw"
-        className="w-full h-[2rem] object-contain block dark:hidden"
+        className="w-full h-full object-contain block dark:hidden"
       />
 
       <Image
@@ -21,7 +21,7 @@ function LogoImage() {
         width={0}
         height={0}
         sizes="100vw"
-        className="w-full h-[2rem] object-contain hidden dark:block"
+        className="w-full h-full object-contain hidden dark:block"
       />
     </Link>
   )

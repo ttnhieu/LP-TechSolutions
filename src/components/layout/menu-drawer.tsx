@@ -3,6 +3,7 @@ import { AlignJustifyIcon } from 'lucide-react'
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger
@@ -14,12 +15,13 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import LogoImage from '../common/logo-image'
 import { useNavigation } from '@/hooks/useNavigation'
+import { useState } from 'react'
 
 export default function MenuDrawer() {
+  const [open, setOpen] = useState(false)
   const { items, activeId, handleClick } = useNavigation()
-
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button
           variant="ghost"
@@ -35,6 +37,10 @@ export default function MenuDrawer() {
           <SheetTitle>
             <LogoImage />
           </SheetTitle>
+          <SheetDescription className="sr-only">
+            {/* Mô tả nội dung của Sheet, giúp screen reader hiểu */}
+            Navigation menu for mobile users.
+          </SheetDescription>
         </SheetHeader>
         <div className="sheet-content mt-4">
           <Accordion type="single" collapsible>
@@ -48,7 +54,10 @@ export default function MenuDrawer() {
                     menu.id === activeId &&
                       'bg-primary text-white dark:bg-primary'
                   )}
-                  onClick={() => handleClick(menu.id)}
+                  onClick={() => {
+                    handleClick(menu.id)
+                    setOpen(false)
+                  }}
                 >
                   {menu.title}
                 </AccordionItem>

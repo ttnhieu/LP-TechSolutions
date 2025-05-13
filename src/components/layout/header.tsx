@@ -9,14 +9,12 @@ import LogoImage from '../common/logo-image'
 
 function Header() {
   return (
-    <header
-      className={`flex sticky top-0 z-40 bg-background h-16 shrink-0 items-center gap-2 border-b `}
-    >
+    <header className={`sticky top-0 z-40 bg-background shrink-0 border-b `}>
       <nav
-        className={`flex items-center justify-between w-full container sticky top-0`}
+        className={`container w-full h-16 flex items-center justify-between gap-6`}
         aria-label="Global"
       >
-        <div className="header-start flex lg:flex-1">
+        <div className="header-start">
           <LogoImage />
         </div>
 
@@ -26,7 +24,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="header-end flex flex-1 justify-end">
+        <div className="header-end">
           <div data-slot="end" className="flex gap-2">
             <LanguagesDropdown />
 
