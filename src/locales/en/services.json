@@ -1,0 +1,46 @@
+{
+  "title": "My services",
+  "sub_title": "Services I offer",
+  "items": [
+    {
+      "title": "Web Design",
+      "description": "Hen our power of choice is untrammelled and when nothing prevents our being able",
+      "image_url": "/images/web-design.png"
+    },
+    {
+      "title": "Graphic Design",
+      "description": "Hen our power of choice is untrammelled and when nothing prevents our being able",
+      "image_url": "/images/design.png"
+    },
+    {
+      "title": "Personal Development",
+      "description": "Hen our power of choice is untrammelled and when nothing prevents our being able",
+      "image_url": "/images/personal.png"
+    },
+    {
+      "title": "IT and Software",
+      "description": "Hen our power of choice is untrammelled and when nothing prevents our being able",
+      "image_url": "/images/server.png"
+    },
+    {
+      "title": "Sales Marketing",
+      "description": "Hen our power of choice is untrammelled and when nothing prevents our being able",
+      "image_url": "/images/pantone.png"
+    },
+    {
+      "title": "Art & Humanities",
+      "description": "Hen our power of choice is untrammelled and when nothing prevents our being able",
+      "image_url": "/images/paint-palette.png"
+    },
+    {
+      "title": "Mobile Application",
+      "description": "Hen our power of choice is untrammelled and when nothing prevents our being able",
+      "image_url": "/images/smartphone.png"
+    },
+    {
+      "title": "Finance & Accounting",
+      "description": "Hen our power of choice is untrammelled and when nothing prevents our being able",
+      "image_url": "/images/infographic.png"
+    }
+  ]
+}

@@ -44,28 +44,29 @@ function WorkflowSection() {
           </div>
 
           <StaggerContainer className="grid grid-cols-12 gap-6">
-            {items.map((item, index) => (
-              <StaggerItem
-                className="col-span-12 xl:col-span-4"
-                key={index}
-                effect={index % 2 === 0 ? 'fadeInDown' : 'fadeInUp'}
-              >
-                <div
-                  className="work-process-box flex flex-col items-center gap-2 max-w-[230px] m-auto text-center style1 wow fadeInUp"
-                  data-wow-delay=".2s"
+            {Array.isArray(items) &&
+              items.map((item, index) => (
+                <StaggerItem
+                  className="col-span-12 xl:col-span-4"
+                  key={index}
+                  effect={index % 2 === 0 ? 'fadeInDown' : 'fadeInUp'}
                 >
-                  <div className="step font-bold text-xs px-3 py-1.5 bg-primary/15 text-primary w-fit rounded-full">
-                    {item.sub_title}
+                  <div
+                    className="work-process-box flex flex-col items-center gap-2 max-w-[230px] m-auto text-center style1 wow fadeInUp"
+                    data-wow-delay=".2s"
+                  >
+                    <div className="step font-bold text-xs px-3 py-1.5 bg-primary/15 text-primary w-fit rounded-full">
+                      {item.sub_title}
+                    </div>
+                    <div className="title font-medium text-xl sm:text-2xl">
+                      {item.title}
+                    </div>
+                    <div className="text-md text-foreground/50">
+                      {item.description}
+                    </div>
                   </div>
-                  <div className="title font-medium text-xl sm:text-2xl">
-                    {item.title}
-                  </div>
-                  <div className="text-md text-foreground/50">
-                    {item.description}
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
+                </StaggerItem>
+              ))}
           </StaggerContainer>
         </div>
       </div>

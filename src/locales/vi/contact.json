@@ -1,0 +1,21 @@
+{
+  "title": "Liên hệ",
+  "sub_title": "Tôi muốn nghe từ bạn",
+  "items": [
+    {
+      "label": "Địa chỉ",
+      "value": "202 Dog Hill Lane Beloit, KS 67420",
+      "icon": "MapPin"
+    },
+    {
+      "label": "Số điện thoại",
+      "value": "+01589634755",
+      "icon": "Phone"
+    },
+    {
+      "label": "Email",
+      "value": "credesign@gmail.com",
+      "icon": "Mail"
+    }
+  ]
+}

@@ -67,15 +67,16 @@ function AboutSection() {
 
             <Reveal effect="fadeInRight" once={false} delay={0.2}>
               <div className="mt-8 text-xl">
-                {aboutInfoList.map((item, index) => (
-                  <p
-                    key={index}
-                    className="flex items-center gap-2 text-foreground/80"
-                  >
-                    <CircleCheckBig className="size-4 text-primary" />
-                    {item.description}
-                  </p>
-                ))}
+                {Array.isArray(aboutInfoList) &&
+                  aboutInfoList.map((item, index) => (
+                    <p
+                      key={index}
+                      className="flex items-center gap-2 text-foreground/80"
+                    >
+                      <CircleCheckBig className="size-4 text-primary" />
+                      {item.description}
+                    </p>
+                  ))}
               </div>
             </Reveal>
           </div>

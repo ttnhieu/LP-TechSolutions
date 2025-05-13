@@ -36,29 +36,30 @@ function FaqsSection() {
         </div>
 
         <StaggerContainer className="mx-auto max-w-4xl pt-10 md:pt-15 grid grid-cols-12 items-start gap-4">
-          {items.map((item, index) => (
-            <StaggerItem
-              key={index}
-              className="col-span-12 lg:col-span-6"
-              effect="fadeInUp"
-              delay={0.3}
-            >
-              <Collapsible className="bg-primary/5 dark:bg-primary/10 rounded-md p-4 md:p-6">
-                <CollapsibleTrigger asChild className="cursor-pointer">
-                  <div className="flex items-center justify-between">
-                    <h4 className="text-md font-semibold">{item.ques}</h4>
-                    <div className="hover:opacity-50">
-                      <ChevronsRight className="text-primary" />
-                      <span className="sr-only">Toggle</span>
+          {Array.isArray(items) &&
+            items.map((item, index) => (
+              <StaggerItem
+                key={index}
+                className="col-span-12 lg:col-span-6"
+                effect="fadeInUp"
+                delay={0.3}
+              >
+                <Collapsible className="bg-primary/5 dark:bg-primary/10 rounded-md p-4 md:p-6">
+                  <CollapsibleTrigger asChild className="cursor-pointer">
+                    <div className="flex items-center justify-between">
+                      <h4 className="text-md font-semibold">{item.ques}</h4>
+                      <div className="hover:opacity-50">
+                        <ChevronsRight className="text-primary" />
+                        <span className="sr-only">Toggle</span>
+                      </div>
                     </div>
-                  </div>
-                </CollapsibleTrigger>
-                <CollapsibleContent className="pt-4">
-                  <div className="font-mono text-sm/6">{item.ans}</div>
-                </CollapsibleContent>
-              </Collapsible>
-            </StaggerItem>
-          ))}
+                  </CollapsibleTrigger>
+                  <CollapsibleContent className="pt-4">
+                    <div className="font-mono text-sm/6">{item.ans}</div>
+                  </CollapsibleContent>
+                </Collapsible>
+              </StaggerItem>
+            ))}
         </StaggerContainer>
       </div>
     </section>

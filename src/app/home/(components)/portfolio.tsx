@@ -66,67 +66,69 @@ function PortfolioSection() {
               id="default-styled-tab"
               role="tablist"
             >
-              {tabs.map((item, index) => (
-                <li className="font-medium" key={index} role="presentation">
-                  <button
-                    className={cn(
-                      'inline-block px-4 py-2 rounded-t-lg border-b-2 border-transparent transition-all duration-300 hover:text-primary hover:border-primary',
-                      item.value === selectedType &&
-                        ' text-primary border-primary'
-                    )}
-                    type="button"
-                    onClick={() => handleClickType(item)}
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
+              {Array.isArray(tabs) &&
+                tabs.map((item, index) => (
+                  <li className="font-medium" key={index} role="presentation">
+                    <button
+                      className={cn(
+                        'inline-block px-4 py-2 rounded-t-lg border-b-2 border-transparent transition-all duration-300 hover:text-primary hover:border-primary',
+                        item.value === selectedType &&
+                          ' text-primary border-primary'
+                      )}
+                      type="button"
+                      onClick={() => handleClickType(item)}
+                    >
+                      {item.label}
+                    </button>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4 pt-10 md:pt-15">
-          <AnimatePresence mode="wait">
-            {filteredList.map((item, index) => (
-              <Link
-                href={item.href}
-                target="_blank"
-                key={item.id}
-                className={cn(
-                  "group rounded-lg relative after:bg-linear-to-b after:from-[#00000024] after:to-[#0000005c] overflow-hidden after:w-full after:h-full after:absolute after:top-0 after:left-0 after:content-['']",
-                  [
-                    index < 3 && 'col-span-3 lg:col-span-2 h-[15rem]',
-                    index >= 3 && 'col-span-3 h-[15rem] lg:h-[20rem]',
-                    index === items.length - 1 && 'hidden lg:block'
-                  ]
-                )}
-              >
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 30 }}
-                  transition={{ duration: 0.4, ease: 'easeInOut' }}
+          <AnimatePresence>
+            {Array.isArray(filteredList) &&
+              filteredList.map((item, index) => (
+                <Link
+                  href={item.href}
+                  target="_blank"
+                  key={item.id}
+                  className={cn(
+                    "group rounded-lg relative after:bg-linear-to-b after:from-[#00000024] after:to-[#0000005c] overflow-hidden after:w-full after:h-full after:absolute after:top-0 after:left-0 after:content-['']",
+                    [
+                      index < 3 && 'col-span-3 lg:col-span-2 h-[15rem]',
+                      index >= 3 && 'col-span-3 h-[15rem] lg:h-[20rem]',
+                      index === items.length - 1 && 'hidden lg:block'
+                    ]
+                  )}
                 >
-                  <Image
-                    alt="Portfolio"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    src={item.image_url}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="portfolio-card-overlay w-full absolute top-0 h-0 invisible bg-[#070b106e] group-hover:h-full group-hover:visible transition-all duration-500"></div>
-                  <div className="absolute left-1/2 -translate-x-1/2 -bottom-[10rem] invisible px-4 sm:px-6 py-4 rounded-lg bg-primary/50 backdrop-blur-sm w-[15rem]  group-hover:bottom-[20px] group-hover:visible transition-all duration-500">
-                    <span className="text-white/90 text-xs">
-                      {getTypeLabel(item.type)}
-                    </span>
-                    <h3 className="text-white text-lg truncate">
-                      {item.title}
-                    </h3>
-                  </div>
-                </motion.div>
-              </Link>
-            ))}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 30 }}
+                    transition={{ duration: 0.4, ease: 'easeInOut' }}
+                  >
+                    <Image
+                      alt="Portfolio"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      src={item.image_url}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="portfolio-card-overlay w-full absolute top-0 h-0 invisible bg-[#070b106e] group-hover:h-full group-hover:visible transition-all duration-500"></div>
+                    <div className="absolute left-1/2 -translate-x-1/2 -bottom-[10rem] invisible px-4 sm:px-6 py-4 rounded-lg bg-primary/50 backdrop-blur-sm w-[15rem]  group-hover:bottom-[20px] group-hover:visible transition-all duration-500">
+                      <span className="text-white/90 text-xs">
+                        {getTypeLabel(item.type)}
+                      </span>
+                      <h3 className="text-white text-lg truncate">
+                        {item.title}
+                      </h3>
+                    </div>
+                  </motion.div>
+                </Link>
+              ))}
           </AnimatePresence>
         </div>
       </div>

@@ -32,23 +32,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="flex flex-col justify-between">
-            <Header />
-            <main className="flex-1 min-h-screen">
-              <I18nProvider>{children}</I18nProvider>
-              {/* {children} */}
-            </main>
-            <Footer />
-          </div>
+        <I18nProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="flex flex-col justify-between">
+              <Header />
+              <main className="flex-1 min-h-screen">{children}</main>
+              <Footer />
+            </div>
 
-          <BackToTopButton />
-        </ThemeProvider>
+            <BackToTopButton />
+          </ThemeProvider>
+        </I18nProvider>
       </body>
     </html>
   )

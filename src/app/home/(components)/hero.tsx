@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils'
 import Reveal from '@/components/animations/reveal'
 
 function HeroSection() {
-  const { t } = useTranslation('landing')
+  const { t: tHero } = useTranslation('hero')
   const { t: tCommon } = useTranslation('common')
 
   return (
@@ -26,10 +26,10 @@ function HeroSection() {
                 <div className="flex w-fit relative bg-primary/20 dark:bg-primary/30 rounded-full text-sm xl:text-md">
                   <div className="intro-sub_title flex items-center justify-between gap-2 p-1.5">
                     <span className="bg-white dark:bg-primary rounded-full px-3 py-1 font-medium">
-                      {t('hero.sub_title_1')}
+                      {tHero('sub_title_1')}
                     </span>
                     <span className="text-primary dark:text-white/80">
-                      {t('hero.sub_title_2')}
+                      {tHero('sub_title_2')}
                     </span>
                     <Image
                       alt=""
@@ -46,12 +46,12 @@ function HeroSection() {
               <div className="">
                 <Reveal effect="fadeInLeft" once={false} duration={0.8}>
                   <h1 className="font-semibold tracking-tight text-foreground text-4xl xl:text-7xl">
-                    {t('hero.title')}
+                    {tHero('title')}
                   </h1>
                 </Reveal>
                 <Reveal effect="fadeInLeft" once={false} delay={0.3}>
                   <p className="mt-8 font-medium text-foreground/80 xl:text-lg/8">
-                    {t('hero.content')}
+                    {tHero('content')}
                   </p>
                 </Reveal>
 

@@ -1,0 +1,21 @@
+{
+  "title": "Cách hoạt động",
+  "sub_title": "Biến thiết bị của bạn thành công cụ quản lý mọi thứ",
+  "items": [
+    {
+      "title": "Tải ứng dụng",
+      "sub_title": "Bước-01",
+      "description": "Có nhiều phiên bản khác nhau của đoạn văn Lorem"
+    },
+    {
+      "title": "Tạo tài khoản",
+      "sub_title": "Bước-02",
+      "description": "Có nhiều phiên bản khác nhau của đoạn văn Lorem"
+    },
+    {
+      "title": "Cài đặt ứng dụng",
+      "sub_title": "Bước-03",
+      "description": "Có nhiều phiên bản khác nhau của đoạn văn Lorem"
+    }
+  ]
+}

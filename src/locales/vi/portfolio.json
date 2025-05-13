@@ -1,0 +1,63 @@
+{
+  "title": "Danh mục dự án",
+  "sub_title": "Xem các dự án của tôi",
+  "tabs": [
+    {
+      "label": "Tất cả",
+      "value": "all"
+    },
+    {
+      "label": "Thiết kế UI/UX",
+      "value": "design"
+    },
+    {
+      "label": "Ứng dụng App",
+      "value": "app"
+    },
+    {
+      "label": "Ứng dụng Web",
+      "value": "web"
+    },
+    {
+      "label": "Trang đích",
+      "value": "landing-page"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "title": "Digitics - Mẫu website cho công ty công nghệ và digital agency",
+      "type": "design",
+      "href": "https://nerko-gatsbyjs.vercel.app/",
+      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/c7c14066-527c-43c5-b381-24a8a91b3311?w=710&cf_fit=scale-down&q=85&format=auto&s=1819f5d10c5b77afaf12ef45da314c2ec4fea47d3c1f895fce32158f73d21c5d"
+    },
+    {
+      "id": 2,
+      "title": "ITFirm - Giải pháp và dịch vụ CNTT",
+      "type": "web",
+      "href": "https://charitics.temptics.com/?storefront=envato-elements",
+      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/39a8aaa2-d142-463f-a40e-c74ee5d0463d?w=710&cf_fit=scale-down&q=85&format=auto&s=b062e289e8658b6ffde14fe5a363bbd5b6eaea0ace65f54bd922d83993744beb"
+    },
+    {
+      "id": 3,
+      "title": "Trang giới thiệu dự án NFT",
+      "type": "app",
+      "href": "https://html.themewant.com/mediweb/",
+      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/e57ee476-0d70-4ca6-b939-93c9cf67c0eb?w=2038&cf_fit=scale-down&q=85&format=auto&s=bb0d8ecf3078e9aab9d0100a2abc9d1d9ab68a42d5de98c30ddf4bb8f5349b1f"
+    },
+    {
+      "id": 4,
+      "title": "Ashop - Ứng dụng mua sắm trên di động",
+      "type": "landing-page",
+      "href": "https://wpocean.com/html/tf/pengu/index.html?storefront=envato-elements",
+      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/c1e04c02-87fe-492b-96a2-667ad4f6c79f?w=710&cf_fit=scale-down&q=85&format=auto&s=b14aedbfcc5c83d96346da08a86a45de54cc40a0d3d2af0202b3548ef163c9db"
+    },
+    {
+      "id": 5,
+      "title": "Runok - Mẫu HTML5 cho website agency",
+      "type": "web",
+      "href": "https://webfolio-nextjs.vercel.app/home-main/",
+      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/a4e55109-92bd-4e82-9598-906c27fe251b?w=2038&cf_fit=scale-down&q=85&format=auto&s=2a260f31f01578072609f4bdc77c2a1b3c0ff4516b8ce5421814110b3ee809a6"
+    }
+  ]
+}

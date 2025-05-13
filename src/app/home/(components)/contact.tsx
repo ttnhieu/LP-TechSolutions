@@ -153,22 +153,25 @@ function ContactSection() {
             <div className="col-span-12 lg:col-span-6 xl:col-span-4">
               <Reveal effect="fadeInRight" once={false}>
                 <div className="flex flex-col gap-6">
-                  {items.map((item, index) => {
-                    const Icon = iconMap[item.icon]
-                    return (
-                      <div key={index} className="flex items-center gap-4">
-                        <div className="w-12 h-12 p-2 bg-primary/10 dark:bg-primary/20 flex items-center justify-center rounded-full">
-                          <Icon className="size-5 text-primary" />
+                  {Array.isArray(items) &&
+                    items.map((item, index) => {
+                      const Icon = iconMap[item.icon]
+                      return (
+                        <div key={index} className="flex items-center gap-4">
+                          <div className="w-12 h-12 p-2 bg-primary/10 dark:bg-primary/20 flex items-center justify-center rounded-full">
+                            <Icon className="size-5 text-primary" />
+                          </div>
+                          <div className="about-complete-project">
+                            <h4 className="font-medium text-lg">
+                              {item.label}
+                            </h4>
+                            <p className="fw-400 secondary-black">
+                              <a href="#">{item.value}</a>
+                            </p>
+                          </div>
                         </div>
-                        <div className="about-complete-project">
-                          <h4 className="font-medium text-lg">{item.label}</h4>
-                          <p className="fw-400 secondary-black">
-                            <a href="#">{item.value}</a>
-                          </p>
-                        </div>
-                      </div>
-                    )
-                  })}
+                      )
+                    })}
                 </div>
               </Reveal>
             </div>

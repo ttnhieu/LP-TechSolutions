@@ -6,7 +6,6 @@ import { MenuType } from '@/shared/constants/menu'
 export function useNavigation() {
   const { t } = useTranslation('menu')
   const items = t('items', { returnObjects: true }) as MenuType[]
-
   const [activeId, setActiveId] = useState('home')
   const { scrollTo } = useScrollToSection()
 

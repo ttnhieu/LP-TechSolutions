@@ -1,0 +1,38 @@
+{
+  "title": "What we optimazations",
+  "sub_title": "Get Our Optimazations",
+  "items_left": [
+    {
+      "title": "High usability",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/wcuIcon1_1.svg"
+    },
+    {
+      "title": "Action Reminder",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/wcuIcon1_2.svg"
+    },
+    {
+      "title": "Merge Files",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/wcuIcon1_3.svg"
+    }
+  ],
+  "items_right": [
+    {
+      "title": "Free Live Chat",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/wcuIcon1_4.svg"
+    },
+    {
+      "title": "Social Share",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/wcuIcon1_5.svg"
+    },
+    {
+      "title": "Custom Shortcuts",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/wcuIcon1_6.svg"
+    }
+  ]
+}
