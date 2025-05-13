@@ -44,7 +44,7 @@ function OptimazationsSection() {
           </Reveal>
         </div>
 
-        <div className=" grid grid-cols-12 gap-8 justify-center items-center pt-10 md:pt-20">
+        <div className="grid grid-cols-12 gap-8 justify-center items-center pt-10 md:pt-20">
           <div className="col-span-12 xl:col-span-4 flex justify-center">
             <StaggerContainer className="flex flex-col gap-4">
               {Array.isArray(contentLeft) &&

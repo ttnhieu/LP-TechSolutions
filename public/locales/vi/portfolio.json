@@ -11,8 +11,8 @@
       "value": "design"
     },
     {
-      "label": "Ứng dụng App",
-      "value": "app"
+      "label": "Thương mại điện tử",
+      "value": "e-commerce"
     },
     {
       "label": "Ứng dụng Web",
@@ -25,39 +25,152 @@
   ],
   "items": [
     {
-      "id": 1,
-      "title": "Digitics - Mẫu website cho công ty công nghệ và digital agency",
+      "id": "project-1",
+      "title": "Beauty Ecommerce Store",
       "type": "design",
-      "href": "https://nerko-gatsbyjs.vercel.app/",
-      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/c7c14066-527c-43c5-b381-24a8a91b3311?w=710&cf_fit=scale-down&q=85&format=auto&s=1819f5d10c5b77afaf12ef45da314c2ec4fea47d3c1f895fce32158f73d21c5d"
+      "thumbnail": "https://elements-resized.envatousercontent.com/elements-cover-images/91f92f30-6a88-4d28-b66d-12d273fb6162?w=2038&cf_fit=scale-down&q=85&format=auto&s=4b2c5d165916bde29003ab6fb395c961c2dba4b1057ae9cdfa0364054bdf9779",
+      "gallery": [
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/03107116-fbbc-49c7-b876-f851a6baecfc?w=632&cf_fit=scale-down&q=85&format=auto&s=233053f7cfab471016a609d3a0edc49bbfab7539dfc6ecfd458d2f4c16d20fc3",
+          "title": "Trang chủ",
+          "description": "Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc, Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc, Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc, Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc. Suspendisse eget egestas a elementum pulvinar et feugiat blandit at. In mi viverra elit nunc."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/0522cd89-fbd7-4fcf-8863-db3b37de4281?w=632&cf_fit=scale-down&q=85&format=auto&s=0f7f330ba086a134bd167f0c614f63ce15dfac298348a0865f093ea835ed53ff",
+          "title": "Sản phẩm",
+          "description": "Giao diện danh sách sản phẩm."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/072eda15-05d2-4bcb-b2e7-0e4b6e52f94f?w=632&cf_fit=scale-down&q=85&format=auto&s=3596437bb613f49e1bd7d0d29d0c4ace03dd39aae28ca274ac3ecd1ac47ffaef",
+          "title": "Chi tiết",
+          "description": "Giao diện chi tiết sản phẩm."
+        }
+      ]
     },
     {
-      "id": 2,
-      "title": "ITFirm - Giải pháp và dịch vụ CNTT",
+      "id": "project-2",
+      "title": "Women's fashion Ecommerce Store Clothes",
+      "type": "e-commerce",
+      "thumbnail": "https://elements-resized.envatousercontent.com/elements-cover-images/f52accff-d53a-45fa-af62-bbab77c49575?w=433&cf_fit=scale-down&q=85&format=auto&s=76635d95892fd298e394fd9f20773b99fa3ee6c00bde2b0045c0a98256cf6c06",
+      "gallery": [
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/33150774-dd12-479e-be81-5d9bb011902b?w=1370&cf_fit=scale-down&q=85&format=auto&s=05bf1dbb8ec30af667407ca5c92f0aab51457be5a822170a068f52c5eb8d7a64",
+          "title": "Trang chủ",
+          "description": "Giao diện trang chủ với menu động."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/638f081c-f914-46e2-b619-18d54c48dc4b?w=1370&cf_fit=scale-down&q=85&format=auto&s=e6ff75848cfc156557a9173dc289118e824c6fb721b323d0d633f8aae9ad0e16",
+          "title": "Sản phẩm",
+          "description": "Giao diện danh sách sản phẩm."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/f03ebbf7-1371-4922-9cd5-6e2ed6c49e7f?w=1370&cf_fit=scale-down&q=85&format=auto&s=f1ef203b4fe1d22dc43e04ad84908e9975ffb7ddc3b0237053e9ba30a68286e3",
+          "title": "Chi tiết",
+          "description": "Giao diện chi tiết sản phẩm."
+        }
+      ]
+    },
+    {
+      "id": "project-3",
+      "title": "Digital Agency",
+      "type": "e-commerce",
+      "thumbnail": "https://elements-resized.envatousercontent.com/elements-cover-images/a4e55109-92bd-4e82-9598-906c27fe251b?w=2038&cf_fit=scale-down&q=85&format=auto&s=2a260f31f01578072609f4bdc77c2a1b3c0ff4516b8ce5421814110b3ee809a6",
+      "gallery": [
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/1d468fc0-034a-4a1f-9ddd-4dec539ad0a3?w=1370&cf_fit=scale-down&q=85&format=auto&s=a65fa62775de42c3c1672467a5c1aff4da5654cbae6773ca53340850068a9ba0",
+          "title": "Trang chủ",
+          "description": "Giao diện trang chủ với menu động."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/5503dd9a-764c-4281-9b78-f28a2c4c27f9?w=1370&cf_fit=scale-down&q=85&format=auto&s=3d2deb7d7c2bf1677980da31bc0d1601c9208bf21df59eec62e2cc8a54e0f317",
+          "title": "Sản phẩm",
+          "description": "Giao diện danh sách sản phẩm."
+        }
+      ]
+    },
+    {
+      "id": "project-4",
+      "title": "Personal Porfolio",
       "type": "web",
-      "href": "https://charitics.temptics.com/?storefront=envato-elements",
-      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/39a8aaa2-d142-463f-a40e-c74ee5d0463d?w=710&cf_fit=scale-down&q=85&format=auto&s=b062e289e8658b6ffde14fe5a363bbd5b6eaea0ace65f54bd922d83993744beb"
+      "thumbnail": "https://elements-resized.envatousercontent.com/elements-cover-images/cfc002e3-37f4-4be8-843f-3038ff9c4f39?w=2038&cf_fit=scale-down&q=85&format=auto&s=66b7d7cc84b1ff18778714e8267d70f57f081878cc6b2a633ff5e08e8a386e88",
+      "gallery": [
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/28b76d36-f80e-4981-b14f-825b7d19746f?w=1370&cf_fit=scale-down&q=85&format=auto&s=f5e332dd0ad5cfce7a870eb3413bd0cdb15c628ef9eff548290fbd0346db3060",
+          "title": "Trang chủ",
+          "description": "Giao diện trang chủ với menu động."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/48352fb4-496c-4c64-8943-38b26de327e2?w=1370&cf_fit=scale-down&q=85&format=auto&s=bb0165c3ab75382015532965cb5ece5fe044c86d692a9ae511ae22913af9794c",
+          "title": "Sản phẩm",
+          "description": "Giao diện danh sách sản phẩm."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/79572714-e6d4-4779-a1fa-2b48868a6c0f?w=1370&cf_fit=scale-down&q=85&format=auto&s=ddb105169cc44ba59462a496f3c29d9186176a285ed01cc2e8700bd90232f353",
+          "title": "Chi tiết 1",
+          "description": "Giao diện chi tiết sản phẩm."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/9385f21d-aaaf-4385-948b-50304830c37d?w=1370&cf_fit=scale-down&q=85&format=auto&s=77454b46a6931d09f1727c65a18d26196e976718aa2bf1225684992679b84663",
+          "title": "Chi tiết 2",
+          "description": "Giao diện chi tiết sản phẩm."
+        }
+      ]
     },
     {
-      "id": 3,
-      "title": "Trang giới thiệu dự án NFT",
-      "type": "app",
-      "href": "https://html.themewant.com/mediweb/",
-      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/e57ee476-0d70-4ca6-b939-93c9cf67c0eb?w=2038&cf_fit=scale-down&q=85&format=auto&s=bb0d8ecf3078e9aab9d0100a2abc9d1d9ab68a42d5de98c30ddf4bb8f5349b1f"
-    },
-    {
-      "id": 4,
-      "title": "Ashop - Ứng dụng mua sắm trên di động",
+      "id": "project-5",
+      "title": "Quality Health Care For Family",
       "type": "landing-page",
-      "href": "https://wpocean.com/html/tf/pengu/index.html?storefront=envato-elements",
-      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/c1e04c02-87fe-492b-96a2-667ad4f6c79f?w=710&cf_fit=scale-down&q=85&format=auto&s=b14aedbfcc5c83d96346da08a86a45de54cc40a0d3d2af0202b3548ef163c9db"
+      "thumbnail": "https://elements-resized.envatousercontent.com/elements-cover-images/92346267-bbe5-453e-bb42-7562b9b83b0c?w=2038&cf_fit=scale-down&q=85&format=auto&s=eb051140e46c9d2f1c02c97c19d5982b8082378d3a4ba8ae751d722d63c3bc24",
+      "gallery": [
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/18b67951-770c-44c4-b8fc-c0e50be7ad24?w=1370&cf_fit=scale-down&q=85&format=auto&s=22728b3b67f5336270c06093cb82feb9a8b085829e6eb67d559af619ee72ed40",
+          "title": "Trang chủ",
+          "description": "Giao diện trang chủ với menu động."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/54f7c3db-1642-4073-adec-8600e37d0fcc?w=1370&cf_fit=scale-down&q=85&format=auto&s=3d780296c37022f121e1a06a1bf3860af20c2ed690031643927c777532b4fe5c",
+          "title": "Sản phẩm",
+          "description": "Giao diện danh sách sản phẩm."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/66c69eb2-da8c-4bfe-a8eb-b80b89dc20bd?w=1370&cf_fit=scale-down&q=85&format=auto&s=b4a12f1ff11c925326baed60e9514c965979337c915db8a57588a08f65488545",
+          "title": "Chi tiết 1",
+          "description": "Giao diện chi tiết sản phẩm."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/bae63223-582a-4e7e-a1e7-3ad93a589edf?w=1370&cf_fit=scale-down&q=85&format=auto&s=ecddcd624fc78498d8e8a003c8abee5125bd6ce56598f2ae9264973003a7cfee",
+          "title": "Chi tiết 2",
+          "description": "Giao diện chi tiết sản phẩm."
+        }
+      ]
     },
     {
-      "id": 5,
-      "title": "Runok - Mẫu HTML5 cho website agency",
-      "type": "web",
-      "href": "https://webfolio-nextjs.vercel.app/home-main/",
-      "image_url": "https://elements-resized.envatousercontent.com/elements-cover-images/a4e55109-92bd-4e82-9598-906c27fe251b?w=2038&cf_fit=scale-down&q=85&format=auto&s=2a260f31f01578072609f4bdc77c2a1b3c0ff4516b8ce5421814110b3ee809a6"
+      "id": "project-6",
+      "title": "Men's fashion Ecommerce Store",
+      "type": "e-commerce",
+      "thumbnail": "https://elements-resized.envatousercontent.com/elements-cover-images/30ab0d31-2e87-46ef-9984-0c3970ebe040?w=2038&cf_fit=scale-down&q=85&format=auto&s=8af2e80d9d82b4b213a85245d8961a4aa86ad010fd81208f3656d61fd10edce9",
+      "gallery": [
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/1dd7c65a-d45a-4b5b-833f-e277c90585f9?w=1370&cf_fit=scale-down&q=85&format=auto&s=f47a11a1aea6c3fcebf329e416e1bb64c9b6af9bf01ac5d39bebbba8aaa96fd9",
+          "title": "Trang chủ",
+          "description": "Giao diện trang chủ với menu động."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/20c2a6e7-e872-4774-a243-f851f1c4e10b?w=1370&cf_fit=scale-down&q=85&format=auto&s=c97911e0ce755d230818ae2fadf3c8a9762ff90aa07b428f02d9289efc38eee7",
+          "title": "Sản phẩm",
+          "description": "Giao diện danh sách sản phẩm."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/264095a6-093b-4537-af12-4dfe50476bd5?w=1370&cf_fit=scale-down&q=85&format=auto&s=82429d1cee6642238f81ddc658b5520baf5287c68379fc6cd89c14cf14d979f0",
+          "title": "Chi tiết 1",
+          "description": "Giao diện chi tiết sản phẩm."
+        },
+        {
+          "src": "https://elements-resized.envatousercontent.com/elements-preview-images/af7c907e-aaee-4df6-9f5b-710252f5c240?w=1370&cf_fit=scale-down&q=85&format=auto&s=92ba07c40d31af7326b12ab17bd11689d5fd7ff03d645ccc141f2690061aec19",
+          "title": "Chi tiết 2",
+          "description": "Giao diện chi tiết sản phẩm."
+        }
+      ]
     }
   ]
 }

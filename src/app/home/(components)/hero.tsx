@@ -20,7 +20,7 @@ function HeroSection() {
         )}
       >
         <div className="container relative z-2">
-          <div className="relative isolate grid grid-cols-12 gap-6 lg:gap-8 pt-4 md:pt-[5rem] pb-2 md:pb-[5rem]">
+          <div className="relative isolate grid grid-cols-12 gap-6 lg:gap-8 pt-4 md:pt-[5rem] pb-2 md:pb-[5rem] overflow-hidden">
             <div className="col-span-12 md:col-span-7 flex flex-col gap-4">
               <Reveal effect="fadeInDown" once={false}>
                 <div className="flex w-fit relative bg-primary/20 dark:bg-primary/30 rounded-full text-sm xl:text-md">

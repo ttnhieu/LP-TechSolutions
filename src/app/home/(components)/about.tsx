@@ -47,7 +47,7 @@ function AboutSection() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7 col-span-1 order-1 lg:order-2">
+          <div className="lg:col-span-7 col-span-1 order-1 lg:order-2 overflow-hidden">
             <span className=" inline-flex items-center gap-2 px-4 text-xl text-primary  border-b-1 border-primary capitalize">
               <Wind className="size-5 rotate-180" />
               {t('title')}
@@ -59,6 +59,7 @@ function AboutSection() {
                 {t('sub_title')}
               </h2>
             </Reveal>
+
             <Reveal effect="fadeInRight" once={false} delay={0.1}>
               <p className="mt-6 text-xl text-foreground/50 text-left">
                 {t('content')}

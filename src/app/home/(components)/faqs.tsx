@@ -35,15 +35,10 @@ function FaqsSection() {
           </Reveal>
         </div>
 
-        <StaggerContainer className="mx-auto max-w-4xl pt-10 md:pt-15 grid grid-cols-12 items-start gap-4">
+        <StaggerContainer className="mx-auto max-w-4xl pt-10 md:pt-15 grid grid-cols-1 lg:grid-cols-2 items-start gap-4">
           {Array.isArray(items) &&
             items.map((item, index) => (
-              <StaggerItem
-                key={index}
-                className="col-span-12 lg:col-span-6"
-                effect="fadeInUp"
-                delay={0.3}
-              >
+              <StaggerItem key={index} effect="fadeInUp" delay={0.3}>
                 <Collapsible className="bg-primary/5 dark:bg-primary/10 rounded-md p-4 md:p-6">
                   <CollapsibleTrigger asChild className="cursor-pointer">
                     <div className="flex items-center justify-between">

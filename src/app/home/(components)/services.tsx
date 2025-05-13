@@ -35,19 +35,15 @@ function ServicesSection() {
             </h2>
           </Reveal>
         </div>
-        <StaggerContainer className="grid grid-cols-12 gap-4 pt-10 md:pt-15">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-10 md:pt-15">
           {Array.isArray(services) &&
             services.map((item, index) => (
-              <StaggerItem
-                key={index}
-                className="lg:col-span-3 sm:col-span-6 col-span-12"
-                effect="zoomIn"
-              >
+              <StaggerItem key={index} className="" effect="zoomIn">
                 <Card className="border-none shadow-1 hover:-translate-y-2 transition-all ease-in-out duration-300">
                   <CardContent className="p-4 sm:p-6 md:p-8">
                     <div className="flex flex-col items-center gap-4">
                       <Image
-                        alt=""
+                        alt={item.title}
                         width={70}
                         height={70}
                         src={item.image_url}
