@@ -4,7 +4,7 @@ import { GalleryInterface } from '../interfaces/Gallery'
 
 export class Porfolio implements Deserializable<Porfolio>, PorfolioInterface {
   id?: string
-  thumbnail: string = '/images/default-image.png'
+  thumbnail: string = '/images/placeholder/image-not-found.png'
   title: string = ''
   type: string = 'all'
   gallery: GalleryInterface[] = []

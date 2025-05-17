@@ -1,10 +1,10 @@
 'use client'
 import Image from 'next/image'
-import { Wind } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+
+import SectionHeader from '@/components/common/section-header'
 import { StaggerContainer } from '@/components/animations/stagger-container'
 import { StaggerItem } from '@/components/animations/stagger-item'
-import Reveal from '@/components/animations/reveal'
 
 function WorkflowSection() {
   const { t } = useTranslation('workflow')
@@ -18,27 +18,16 @@ function WorkflowSection() {
   return (
     <section id="workflow" className="py-5 md:py-10 relative overflow-hidden">
       <div className="container relative">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-2 px-4 text-sm md:text-xl text-primary border-b-1 border-primary mb-0 md:mb-2 capitalize">
-            <Wind className="size-5 rotate-180" />
-            {t('title')}
-            <Wind className="size-5" />
-          </span>
-          <Reveal effect="fadeInUp" once={true}>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold ">
-              {t('sub_title')}
-            </h2>
-          </Reveal>
-        </div>
+        <SectionHeader className="" title={t('title')} namespace="workflow" />
 
         <div className="relative mt-10 md:mt-15 xl:pt-[2rem] xl:pb-[2.5rem] 2xl:pb-[3.5rem]">
           <div className="shape absolute top-0 right-0 w-full hidden xl:block">
             <Image
-              alt="workflow shape"
+              alt="shape_timeline"
               width={0}
               height={0}
               sizes="100vw"
-              src="/images/workProcessShape1_1.png"
+              src="/images/shapes/shape_timeline.png"
               className="w-full h-full object-contain"
             />
           </div>

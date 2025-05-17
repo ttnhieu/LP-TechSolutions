@@ -2,16 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { motionVariants } from '@/components/animations/motionVariants'
+import { RevealConfig } from '@/shared/types/RevealConfig'
 
 type RevealProps = {
   children: React.ReactNode
-  effect?: keyof typeof motionVariants
-  className?: string
-  once?: boolean
-  amount?: number
-  duration?: number
-  delay?: number
-}
+} & RevealConfig
 
 export default function Reveal({
   children,

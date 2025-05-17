@@ -2,20 +2,19 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Wind } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 
-import Reveal from '@/components/animations/reveal'
-import LightBox from '@/components/gallery/lightbox'
+import BaseLightBox from '@/components/gallery/lightbox'
+import SectionHeader from '@/components/common/section-header'
 
+import { cn } from '@/lib/utils'
 import { GalleryInterface } from '@/shared/interfaces/Gallery'
 import { PorfolioInterface } from '@/shared/interfaces/Porfolio'
-import { cn } from '@/lib/utils'
 
-interface TabInterface {
-  label: string
-  value: string
-}
+// interface TabInterface {
+//   label: string
+//   value: string
+// }
 
 function PortfolioSection() {
   const { t } = useTranslation('portfolio')
@@ -38,9 +37,9 @@ function PortfolioSection() {
     return tabs.find((item) => item.value === type)?.label
   }
 
-  const handleClickType = (item: TabInterface) => {
-    setSelectedType(item.value)
-  }
+  // const handleClickType = (item: TabInterface) => {
+  //   setSelectedType(item.value)
+  // }
 
   const handleOpenLightbox = (itemIndex: number) => {
     const selected = filteredList[itemIndex]
@@ -51,19 +50,17 @@ function PortfolioSection() {
     <section id="portfolio" className="py-5 md:py-10 relative overflow-hidden">
       <div className="container relative">
         <div className="flex lg:flex-row flex-col justify-between lg:items-end gap-4">
-          <div className="lg:max-w-[510px] text-center lg:text-left">
-            <span className="inline-flex items-center gap-2 px-4 text-sm md:text-xl text-primary border-b-1 border-primary mb-0 md:mb-2 capitalize">
-              <Wind className="size-5 rotate-180" />
-              {t('title')}
-              <Wind className="size-5" />
-            </span>
-            <Reveal effect="fadeInLeft" once={false}>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-                {t('sub_title')}
-              </h2>
-            </Reveal>
-          </div>
+          <SectionHeader
+            align="left"
+            title={t('title')}
+            namespace="portfolio"
+            subTitleRevealProps={{
+              effect: 'fadeInLeft'
+            }}
+          />
 
+          {/*
+          // MENU
           <div className="border-b border-gray-200 dark:border-gray-700">
             <ul
               className="flex flex-wrap justify-center -mb-px text-sm text-center"
@@ -87,7 +84,7 @@ function PortfolioSection() {
                   </li>
                 ))}
             </ul>
-          </div>
+          </div> */}
         </div>
         <AnimatePresence>
           <motion.div
@@ -129,7 +126,11 @@ function PortfolioSection() {
             ))}
           </motion.div>
         </AnimatePresence>
-        <LightBox open={open} close={() => setOpen(false)} slides={slides} />
+        <BaseLightBox
+          open={open}
+          close={() => setOpen(false)}
+          slides={slides}
+        />
       </div>
     </section>
   )

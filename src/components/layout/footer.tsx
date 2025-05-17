@@ -1,72 +1,47 @@
-import { Globe, Phone } from 'lucide-react'
 import LogoImage from '../common/logo-image'
+import FacebookIcon from '../icons/facebook'
+import InstagramIcon from '../icons/instagram'
+import GithubIcon from '../icons/github'
+import { Card, CardContent } from '../ui/card'
+import Image from 'next/image'
 
 function Footer() {
   return (
-    <footer className="border-t border-gray-100 dark:border-white/20 relative overflow-hidden">
-      {/* <div className="gradient-shadow-top"></div>
-      <div className="gradient-shadow-bottom"></div> */}
-      <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4  gap-6 my-6">
-          <div className="flex flex-col gap-3">
-            <LogoImage />
+    <footer className="pt-[3rem] md:pt-[6rem] xl:pt-[10rem] relative overflow-hidden bg-hero">
+      <div className="absolute left-0 -top-[0.5rem] md:-top-[1.2rem] xl:-top-[3.5rem] w-full h-auto z-10">
+        <Image
+          alt="hero shape wave"
+          width={0}
+          height={0}
+          sizes="100vw"
+          src="/images/shapes/shape_hero_wave_4.svg"
+          className="object-contain w-full h-full dark:hidden block scale-x-[-1] scale-y-[-1]"
+        />
+        <Image
+          alt="hero"
+          width={0}
+          height={0}
+          sizes="100vw"
+          src="/images/shapes/shape_hero_wave_4_dark.svg"
+          className="object-contain w-full h-full hidden dark:block scale-x-[-1] scale-y-[-1]"
+        />
+      </div>
 
-            <div className="text-default-600">
-              <a href="javascript:void(0);">(+123) 456 789 123</a>
-            </div>
-            <div className="text-default-600">
-              <a href="javascript:void(0);">example@mail.com</a>
-            </div>
-            <div className="flex items-center gap-4 mt-4">
-              <a href="#!" className="cursor-pointer">
-                <Phone />
-              </a>
-              <a href="#!" className="cursor-pointer">
-                <Globe />
-              </a>
-              <a href="#!" className="cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  data-lucide="instagram"
-                  className="lucide lucide-instagram h-6 w-6 transition-all text-default-600 hover:text-primary"
-                >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                </svg>
-              </a>
-              <a href="#!" className="cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  data-lucide="twitter"
-                  className="lucide lucide-twitter h-6 w-6 transition-all text-default-600 hover:text-primary"
-                >
-                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                </svg>
-              </a>
-            </div>
+      <div className="container">
+        <div className="grid grid-cols-12 gap-6 my-6">
+          <div className="col-span-12 lg:col-span-4 space-y-4">
+            <LogoImage />
+            <p className="text-foreground/50">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptatibus facere modi possimus dignissimos, aliquam nobis
+              eaque?
+            </p>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <h5 className="mb-3 font-semibold text-default-950">About</h5>
+          <div className="col-span-6 lg:col-span-2 flex flex-col gap-3">
+            <h5 className="text-lg font-semibold">About</h5>
             <div className="text-default-600">
-              <a href="javascript:void(0);">About Us</a>
+              <a href="javascript:void(0);">Our Team</a>
             </div>
             <div className="text-default-600">
               <a href="javascript:void(0);">Features</a>
@@ -75,20 +50,18 @@ function Footer() {
               <a href="javascript:void(0);">News</a>
             </div>
             <div className="text-default-600">
-              <a href="javascript:void(0);">Careers</a>
-            </div>
-            <div className="text-default-600">
               <a href="javascript:void(0);">Services</a>
             </div>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <h5 className="mb-3 font-semibold text-default-950">Company</h5>
+          <div className="col-span-6 lg:col-span-2 flex flex-col gap-3">
+            <h5 className="text-lg font-semibold">Support</h5>
+
             <div className="text-default-600">
-              <a href="javascript:void(0);">Our Team</a>
+              <a href="javascript:void(0);">Contact Us</a>
             </div>
             <div className="text-default-600">
-              <a href="javascript:void(0);">Partner with Us</a>
+              <a href="javascript:void(0);">Accessibility</a>
             </div>
             <div className="text-default-600">
               <a href="javascript:void(0);">FAQs</a>
@@ -98,23 +71,49 @@ function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-3">
-            <h5 className="mb-3 font-semibold text-default-950">Support</h5>
-            <div className="text-default-600">
-              <a href="javascript:void(0);">About</a>
-            </div>
-            <div className="text-default-600">
-              <a href="javascript:void(0);">Support Center</a>
-            </div>
-            <div className="text-default-600">
-              <a href="javascript:void(0);">Feedback</a>
-            </div>
-            <div className="text-default-600">
-              <a href="javascript:void(0);">Contact Us</a>
-            </div>
-            <div className="text-default-600">
-              <a href="javascript:void(0);">Accessibility</a>
-            </div>
+          <div className="col-span-12 lg:col-span-4">
+            <Card className="border-none shadow-1 rounded-xl">
+              <CardContent className="p-4 lg:p-6">
+                <h5 className="text-sm font-semibold text-primary">
+                  Contact Information
+                </h5>
+
+                <div className="mb-4 mt-2">
+                  <h2 className="text-2xl">Ready to get started?</h2>
+
+                  <p className="text-foreground/50 mt-1">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  {/* <a href="javascript:void(0);" className="cursor-pointer">
+                  <Phone />
+                </a>
+                <a href="javascript:void(0);" className="cursor-pointer">
+                  <Globe />
+                </a> */}
+                  <a
+                    href="javascript:void(0);"
+                    className="cursor-pointer text-foreground/60 hover:text-foreground transition-all"
+                  >
+                    <FacebookIcon className="" />
+                  </a>
+                  <a
+                    href="javascript:void(0);"
+                    className="cursor-pointer text-foreground/60 hover:text-foreground transition-all"
+                  >
+                    <InstagramIcon className="" />
+                  </a>
+                  <a
+                    href="javascript:void(0);"
+                    className="cursor-pointer text-foreground/60 hover:text-foreground transition-all"
+                  >
+                    <GithubIcon className="" />
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 

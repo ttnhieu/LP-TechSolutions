@@ -1,0 +1,86 @@
+{
+  "title": "Technologies",
+  "sub_title": "We use the most modern and optimal <highlight>technologies</highlight>",
+  "items": [
+    {
+      "title": "Bitbucket",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_bitbucket.svg"
+    },
+    {
+      "title": "Bootstrap",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_bootstrap.svg"
+    },
+    {
+      "title": "Git",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_git.svg"
+    },
+    {
+      "title": "Gitlab",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_gitlab.svg"
+    },
+    {
+      "title": "Javascript",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_javascript.svg"
+    },
+    {
+      "title": "Nodejs",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_nodejs.svg"
+    },
+    {
+      "title": "Nuxt",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_nuxt.svg"
+    },
+    {
+      "title": "PHP",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_php.svg"
+    },
+    {
+      "title": "React",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_react.svg"
+    },
+    {
+      "title": "SASS",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_sass.svg"
+    },
+    {
+      "title": "Tailwind",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_tailwind.svg"
+    },
+    {
+      "title": "Typescript",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_typescript.svg"
+    },
+    {
+      "title": "VS Code",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_visual_studio.svg"
+    },
+    {
+      "title": "XD",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_xd.svg"
+    },
+    {
+      "title": "Docker",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_docker.svg"
+    },
+    {
+      "title": "MongoDB",
+      "description": "here are many variations of passages of Lorem Ipsum",
+      "image_url": "/images/icons/tech_mongo.svg"
+    }
+  ]
+}

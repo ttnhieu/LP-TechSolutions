@@ -29,10 +29,10 @@ export default function LanguagesDropdown() {
             <AvatarImage
               src={
                 i18n.language === 'en'
-                  ? '/images/usa-flag.svg'
-                  : '/images/vietnam-flag.svg'
+                  ? '/images/icons/flag_usa.svg'
+                  : '/images/icons/flag_vietnam.svg'
               }
-              alt="vietnam-flag"
+              alt="flag_vietnam"
             />
           </Avatar>
         </Button>
@@ -44,7 +44,10 @@ export default function LanguagesDropdown() {
             onClick={() => changeLanguage('vi')}
           >
             <Avatar className=" w-6 h-6">
-              <AvatarImage src="/images/vietnam-flag.svg" alt="vietnam-flag" />
+              <AvatarImage
+                src="/images/icons/flag_vietnam.svg"
+                alt="flag_vietnam"
+              />
             </Avatar>
             Vietnamese
           </DropdownMenuItem>
@@ -53,7 +56,7 @@ export default function LanguagesDropdown() {
             onClick={() => changeLanguage('en')}
           >
             <Avatar className=" w-6 h-6">
-              <AvatarImage src="/images/usa-flag.svg" alt="usa-flag" />
+              <AvatarImage src="/images/icons/flag_usa.svg" alt="flag_usa" />
             </Avatar>
             English
           </DropdownMenuItem>

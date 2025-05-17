@@ -2,12 +2,16 @@ import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
 import '@/styles/tailwind.css'
+
+import { Toaster } from '@/components/ui/sonner'
+
+import { I18nProvider } from '@/providers/i18n-provider'
+
 import ThemeProvider from '@/components/layout/theme-provider'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
-import BackToTopButton from '@/components/common/back-to-top-buton'
-import { I18nProvider } from '@/providers/i18n-provider'
-// import '@/lib/i18n'
+import BackToTopButton from '@/components/buttons/back-to-top-buton'
+import FloatingButtons from '@/components/buttons/floating-button'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -45,7 +49,10 @@ export default function RootLayout({
               <Footer />
             </div>
 
+            <Toaster position="top-right" richColors closeButton />
+
             <BackToTopButton />
+            <FloatingButtons />
           </ThemeProvider>
         </I18nProvider>
       </body>

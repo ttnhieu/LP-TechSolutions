@@ -23,7 +23,7 @@ type LightBoxProps = {
  * Omit<..., "open" | "close" | "slides">: loại bỏ các prop đã custom để tránh trùng.
  * ...restProps: gom tất cả props còn lại để truyền xuống Lightbox.
  */
-function LightBox({ open, close, slides, ...restProps }: LightBoxProps) {
+function BaseLightBox({ open, close, slides, ...restProps }: LightBoxProps) {
   return (
     <Lightbox
       open={open}
@@ -35,4 +35,4 @@ function LightBox({ open, close, slides, ...restProps }: LightBoxProps) {
   )
 }
 
-export default LightBox
+export default BaseLightBox

@@ -1,6 +1,6 @@
 {
   "title": "Contact",
-  "sub_title": "I want to hear from you",
+  "sub_title": "I want to <highlight>hear</highlight> from you",
   "items": [
     {
       "label": "Address",
@@ -16,6 +16,25 @@
       "label": "Email",
       "value": "credesign@gmail.com",
       "icon": "Mail"
+    },
+    {
+      "label": "Instagram",
+      "value": "instagram.com",
+      "icon": "Instagram"
+    },
+    {
+      "label": "Facebook",
+      "value": "fb.com",
+      "icon": "Facebook"
+    },
+    {
+      "label": "Github",
+      "value": "github.com",
+      "icon": "Github"
     }
-  ]
+  ],
+  "thanks": {
+    "title": "Thank you for submitting!",
+    "content": "We have received your information. \n We will contact you as soon as possible."
+  }
 }

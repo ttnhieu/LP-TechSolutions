@@ -1,27 +1,35 @@
 'use client'
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
-import { MoveRight, Play } from 'lucide-react'
+import { CreditCard, MoveRight, RefreshCcw } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { cn } from '@/lib/utils'
+
+import { ParticlesComponent } from '@/components/background/particles'
 import Reveal from '@/components/animations/reveal'
+import TranslatedText from '@/components/common/translate-text'
+import { useScrollToSection } from '@/hooks/useScrollToSection'
+import { cn } from '@/lib/utils'
 
 function HeroSection() {
   const { t: tHero } = useTranslation('hero')
   const { t: tCommon } = useTranslation('common')
+  const { scrollTo } = useScrollToSection()
+
+  const onViewPortfolio = (id: string) => {
+    scrollTo(id)
+  }
 
   return (
     <section id="hero" className="relative">
       <div
         className={cn(
-          'hero-bg-dark bg-[url(/images/bg-g1.webp)] bg-center bg-cove',
-          "after:content-[''] after:absolute after:w-full after:h-[2rem] md:after:h-[8rem] xl:after:h-[9rem] dark:after:bg-[url(/images/banner-bg-shape-2-dark.svg)] after:bg-[url(/images/banner-bg-shape-1.svg)] after:z-10 after:left-0 after:bottom-0 after:bg-center after:bg-cover"
+          'relative pt-[2rem] md:pt-[5rem] lg:pt-[10rem] pb-[6rem] md:pb-[10rem] lg:pb-[15rem] flex items-start lg:items-center justify-center'
         )}
       >
-        <div className="container relative z-2">
-          <div className="relative isolate grid grid-cols-12 gap-6 lg:gap-8 pt-4 md:pt-[5rem] pb-2 md:pb-[5rem] overflow-hidden">
-            <div className="col-span-12 md:col-span-7 flex flex-col gap-4">
+        <div className="container relative z-10">
+          <div className="relative isolate grid grid-cols-12 gap-8 sm:gap-10 overflow-hidden">
+            <div className="col-span-12 lg:col-span-6 flex flex-col gap-4 lg:gap-10">
               <Reveal effect="fadeInDown" once={true}>
                 <div className="flex w-fit relative bg-primary/20 dark:bg-primary/30 rounded-full text-sm xl:text-md">
                   <div className="intro-sub_title flex items-center justify-between gap-2 p-1.5">
@@ -32,11 +40,11 @@ function HeroSection() {
                       {tHero('sub_title_2')}
                     </span>
                     <Image
-                      alt=""
+                      alt="hero fire icon"
                       width={0}
                       height={0}
                       sizes="100vw"
-                      src="/images/fireIcon.svg"
+                      src="/images/icons/fire.svg"
                       className="object-cover w-[1rem] h-[1rem]"
                     />
                   </div>
@@ -45,69 +53,105 @@ function HeroSection() {
 
               <div className="">
                 <Reveal effect="fadeInLeft" once={true} duration={0.8}>
-                  <h1 className="font-semibold tracking-tight text-foreground text-4xl xl:text-7xl">
-                    {tHero('title')}
+                  <h1 className="font-semibold tracking-tight text-foreground text-4xl lg:text-6xl">
+                    <TranslatedText i18nKey="title" ns="hero" />
                   </h1>
                 </Reveal>
+
                 <Reveal effect="fadeInLeft" once={true} delay={0.3}>
                   <p className="mt-8 font-medium text-foreground/80 xl:text-lg/8">
                     {tHero('content')}
                   </p>
                 </Reveal>
 
-                <div className="mt-10 mb-4 md:pb-[5rem] flex items-center justify-center sm:justify-start gap-x-4 md:gap-x-6">
+                <div className="mt-[2.5rem] lg:mt-[2rem] xl:mt-[3.5rem] flex items-center justify-start gap-x-4 md:gap-x-6">
                   <Reveal effect="fadeInUp" once={true} delay={0.1}>
-                    <Button className="h-10 sm:h-[3rem] px-4 md:px-8 rounded-full cursor-pointer text-md btn-effect-2">
-                      {tCommon('buttons.get_started')} <MoveRight />
+                    <Button
+                      className="h-9 lg:h-[3rem] px-4 md:px-8 rounded-full cursor-pointer text-md btn-effect-2"
+                      onClick={() => onViewPortfolio('contact')}
+                    >
+                      {tCommon('buttons.contact')} <MoveRight />
                     </Button>
                   </Reveal>
                   <Reveal effect="fadeInUp" once={true} delay={0.2}>
                     <Button
-                      className="h-10 sm:h-[3rem] px-4 md:px-8 rounded-full cursor-pointer text-md btn-effect-2 text-primary border-primary btn-outlined bg-transparent"
+                      className="h-9 lg:h-[3rem] px-4 md:px-8 rounded-full cursor-pointer text-md btn-effect-2 text-primary border-primary btn-outlined bg-transparent"
                       variant="outline"
+                      onClick={() => onViewPortfolio('portfolio')}
                     >
-                      {tCommon('buttons.watch_video')} <Play />
+                      {tCommon('buttons.view_portfolio')} <MoveRight />
                     </Button>
+                  </Reveal>
+                </div>
+
+                <div className="mt-[3rem] lg:mt-[2rem] xl:mt-[3.5rem] flex items-center justify-start gap-x-4 md:gap-x-6">
+                  <Reveal effect="zoomIn" once={true}>
+                    <div className="flex gap-2 sm:gap-4 items-center uppercase text-xs sm:text-sm">
+                      <span className="p-2 bg-primary/10 dark:bg-primary/20 rounded-full text-primary">
+                        <RefreshCcw className="size-4" />
+                      </span>
+                      Free 14 Days Trial
+                    </div>
+                  </Reveal>
+                  <Reveal effect="zoomIn" once={true}>
+                    <div className="flex gap-2 sm:gap-4 items-center uppercase text-xs sm:text-sm">
+                      <span className="p-2 bg-primary/10 dark:bg-primary/20 rounded-full text-primary">
+                        <CreditCard className="size-4" />
+                      </span>
+                      One time payment
+                    </div>
                   </Reveal>
                 </div>
               </div>
             </div>
-            <div className="col-span-12 md:col-span-5">
-              <div className="intro-thumb relative md:pt-[10rem] lg:pt-[5rem] w-full h-full">
-                <div className="thumbShape1 absolute top-0 left-0 z-10 w-full h-full animate-ripple">
-                  <Image
-                    alt="thumbShape"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    src="/images/introThumbShape1_1.png"
-                    className="w-full h-auto object-contain"
-                  />
+            <div className="col-span-12 lg:col-span-6">
+              <Reveal effect="zoomIn" once={true}>
+                <div className="relative">
+                  <div className="intro-thumb w-full h-[18rem] sm:h-[30rem] relative z-10">
+                    <Image
+                      fill
+                      priority
+                      alt="Hero Thumb"
+                      src="/images/illustrations/hero_mockup_2.svg"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
-                <div className="thumbShape2 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-3/4 h-3/4">
-                  <Image
-                    alt="thumbShape"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    src="/images/introThumbShape1_2.png"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-
-                <Reveal effect="fadeInRight" once={true}>
-                  <Image
-                    alt="Blog"
-                    width={0}
-                    height={0}
-                    sizes="100vw"
-                    src="/images/introThumb1_1.png"
-                    className="w-full h-auto object-contain relative z-30"
-                  />
-                </Reveal>
-              </div>
+              </Reveal>
             </div>
           </div>
+        </div>
+
+        <ParticlesComponent />
+
+        <div className="absolute left-0 -bottom-[1px] w-full h-auto z-10">
+          <Image
+            alt="hero shape wave"
+            width={0}
+            height={0}
+            sizes="100vw"
+            src="/images/shapes/shape_hero_wave_4.svg"
+            className="object-contain w-full h-full dark:hidden block"
+          />
+          <Image
+            alt="hero"
+            width={0}
+            height={0}
+            sizes="100vw"
+            src="/images/shapes/shape_hero_wave_4_dark.svg"
+            className="object-contain w-full h-full hidden dark:block"
+          />
+        </div>
+
+        <div className="absolute left-0 bottom-0 w-full h-auto -z-10 dark:opacity-15 opacity-10">
+          <Image
+            alt="hero"
+            width={0}
+            height={0}
+            sizes="100vw"
+            src="/images/shapes/shape_hero_abstract_5.svg"
+            className="object-contain w-full h-full scale-x-[-1]"
+          />
         </div>
       </div>
     </section>

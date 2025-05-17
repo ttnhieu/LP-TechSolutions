@@ -1,6 +1,6 @@
 {
   "title": "My Portfolio",
-  "sub_title": "Visit my portfolio",
+  "sub_title": "Visit my <highlight>portfolio</highlight>",
   "tabs": [
     {
       "label": "All",

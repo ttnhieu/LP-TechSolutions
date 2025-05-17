@@ -30,6 +30,12 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --shadow-1: 0px 6px 34px rgba(215, 216, 222, 0.41);
+
+    --yarl__thumbnails_thumbnail_border_color: #ffffff42;
+    --swiper-pagination-color: hsl(var(--primary));
+    --swiper-pagination-bullet-inactive-color: hsl(var(--foreground));
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
   }
   .dark {
     /* --background: 0 0% 3.9%; */

@@ -1,6 +1,6 @@
 {
   "title": "Liên hệ",
-  "sub_title": "Tôi muốn nghe từ bạn",
+  "sub_title": "Tôi muốn <highlight>nghe</highlight> từ bạn",
   "items": [
     {
       "label": "Địa chỉ",
@@ -16,6 +16,25 @@
       "label": "Email",
       "value": "credesign@gmail.com",
       "icon": "Mail"
+    },
+    {
+      "label": "Instagram",
+      "value": "instagram.com",
+      "icon": "Instagram"
+    },
+    {
+      "label": "Facebook",
+      "value": "fb.com",
+      "icon": "Facebook"
+    },
+    {
+      "label": "Github",
+      "value": "github.com",
+      "icon": "Github"
     }
-  ]
+  ],
+  "thanks": {
+    "title": "Cảm ơn bạn đã gửi!",
+    "content": "Chúng tôi đã nhận được thông tin của bạn. \n Chúng tôi sẽ liên hệ trong thời gian sớm nhất."
+  }
 }

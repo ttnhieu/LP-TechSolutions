@@ -21,8 +21,8 @@ export const MENU: MenuType[] = [
     title: 'About'
   },
   {
-    id: 'optimazation',
-    title: 'Optimization'
+    id: 'optimizations',
+    title: 'Optimizations'
   },
   {
     id: 'portfolio',

@@ -1,7 +1,7 @@
 {
   "title": "Về chúng tôi",
-  "sub_title": "Trao quyền cho bạn để cảm thấy tốt nhất mỗi ngày",
-  "content": "Porttitor ornare fermentum aliquam pharetra ut facilisis gravida risus suscipit. dui feugiat fusce conubia ridiculus tristique parturient natoque vulputate risu.",
+  "sub_title": "Được <highlight>khách hàng</highlight> trên toàn thế giới tin dùng",
+  "description": "Porttitor ornare fermentum aliquam pharetra ut facilisis gravida risus suscipit. dui feugiat fusce conubia ridiculus tristique parturient natoque vulputate risu.",
   "items": [
     {
       "description": "Dịch vụ gọi 24/7 luôn sẵn sàng"
@@ -11,6 +11,9 @@
     },
     {
       "description": "Đội ngũ chuyên nghiệp"
+    },
+    {
+      "description": "Dịch vụ gọi 24/7 luôn sẵn sàng"
     }
   ]
 }

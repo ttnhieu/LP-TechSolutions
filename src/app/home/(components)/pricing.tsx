@@ -1,13 +1,13 @@
 'use client'
-import { CheckIcon, Wind } from 'lucide-react'
+import { CheckIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
-import Reveal from '@/components/animations/reveal'
 import { StaggerContainer } from '@/components/animations/stagger-container'
 import { StaggerItem } from '@/components/animations/stagger-item'
+import SectionHeader from '@/components/common/section-header'
 
 function PricingSection() {
   const { t } = useTranslation('pricing')
@@ -28,16 +28,7 @@ function PricingSection() {
     <section id="pricing" className="py-5 md:py-10 relative">
       <div className="container relative">
         <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-2 px-4 text-sm md:text-xl text-primary border-b-1 border-primary mb-0 md:mb-2 capitalize">
-            <Wind className="size-5 rotate-180" />
-            {t('title')}
-            <Wind className="size-5" />
-          </span>
-          <Reveal effect="fadeInUp" once={true}>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold ">
-              {t('sub_title')}
-            </h2>
-          </Reveal>
+          <SectionHeader title={t('title')} namespace="pricing" />
         </div>
 
         <StaggerContainer className="mx-auto max-w-lg lg:max-w-4xl pt-10 md:pt-15 grid grid-cols-1 items-center gap-y-6 sm:gap-y-0 lg:grid-cols-2">

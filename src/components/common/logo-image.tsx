@@ -7,7 +7,7 @@ function LogoImage() {
       <span className="sr-only">Your Company</span>
 
       <Image
-        src="/images/logo.svg"
+        src="/images/logos/logo.svg"
         alt="logo"
         width={0}
         height={0}
@@ -16,7 +16,7 @@ function LogoImage() {
       />
 
       <Image
-        src="/images/logo-dark.svg"
+        src="/images/logos/logo-dark.svg"
         alt="logo"
         width={0}
         height={0}

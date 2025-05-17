@@ -1,10 +1,14 @@
 'use client'
-import { Mail, MapPin, Phone, Wind } from 'lucide-react'
+import { z } from 'zod'
 import Image from 'next/image'
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { useForm } from 'react-hook-form'
+
+import { AnimatePresence, motion } from 'framer-motion'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
+
 import {
   Form,
   FormControl,
@@ -15,10 +19,7 @@ import {
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
-import { useTranslation } from 'react-i18next'
-import Reveal from '@/components/animations/reveal'
-import { StaggerContainer } from '@/components/animations/stagger-container'
-import { StaggerItem } from '@/components/animations/stagger-item'
+import SectionHeader from '@/components/common/section-header'
 
 const FormSchema = z.object({
   name: z.string().min(2, {
@@ -30,68 +31,76 @@ const FormSchema = z.object({
   })
 })
 
-const iconMap = {
-  MapPin: MapPin,
-  Phone: Phone,
-  Mail: Mail
-}
-type IconName = keyof typeof iconMap
-
 function ContactSection() {
   const { t } = useTranslation('contact')
-
-  const items = t('items', { returnObjects: true }) as {
-    label: string
-    value: string
-    icon: IconName
-  }[]
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      name: ''
+      name: '',
+      email: '',
+      message: ''
     }
   })
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
+  const onSubmit = (data: z.infer<typeof FormSchema>) => {
     console.log('🚀 ~ onSubmit ~ data:', data)
+    setIsSubmitted(true)
   }
 
   return (
-    <section
-      id="contact"
-      className="pt-5 pb-10 md:pt-10 relative bg-gradient-1"
-    >
+    <section id="contact" className="pt-5 md:pt-10 relative">
       <div className="container relative">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="inline-flex items-center gap-2 px-4 text-sm md:text-xl text-primary border-b-1 border-primary mb-0 md:mb-2 capitalize">
-            <Wind className="size-5 rotate-180" />
-            {t('title')}
-            <Wind className="size-5" />
-          </span>
-          <Reveal effect="fadeInUp" once={true}>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold">
-              {t('sub_title')}
-            </h2>
-          </Reveal>
-        </div>
+        <SectionHeader title={t('title')} namespace="contact" />
 
-        <div className="mx-auto max-w-lg lg:max-w-4xl pt-10 md:pt-15 overflow-hidden">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 justify-between">
-            <Reveal effect="fadeInLeft" once={true}>
-              <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onSubmit)}
-                  className="grid grid-cols-12 gap-4"
-                >
-                  <div className="col-span-12 grid grid-cols-12 gap-4">
-                    <div className="col-span-12 md:col-span-6">
+        <div className="mx-auto max-w-4xl pt-10 md:pt-15 overflow-hidden">
+          <AnimatePresence mode="wait">
+            {isSubmitted ? (
+              <motion.div
+                key="thankyou"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.4 }}
+                className="flex flex-col items-center space-y-2 rounded-lg"
+              >
+                <Image
+                  alt="contact success"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  src="/images/illustrations/mailbox.svg"
+                  className="w-[15rem] h-auto object-cover rounded-2xl"
+                />
+                <h3 className="text-2xl sm:text-3xl font-semibold ">
+                  {t('thanks.title')}
+                </h3>
+                <p className="text-md text-center text-foreground/50 whitespace-pre-line">
+                  {t('thanks.content')}
+                </p>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="form"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.4 }}
+                className="px-1"
+              >
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="space-y-4"
+                  >
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormControl className="h-[3rem] border border-[hsl(var(--border))] focus-visible:ring-primary">
+                            <FormControl className="md:text-md h-[3rem] border border-[hsl(var(--border))] shadow-none focus-visible:ring-primary">
                               <Input placeholder="Your name" {...field} />
                             </FormControl>
 
@@ -99,15 +108,13 @@ function ContactSection() {
                           </FormItem>
                         )}
                       />
-                    </div>
 
-                    <div className="col-span-12 md:col-span-6">
                       <FormField
                         control={form.control}
                         name="email"
                         render={({ field }) => (
                           <FormItem className="">
-                            <FormControl className="h-[3rem] border border-[hsl(var(--border))] focus-visible:ring-primary">
+                            <FormControl className="md:text-md h-[3rem] border border-[hsl(var(--border))] shadow-none focus-visible:ring-primary">
                               <Input placeholder="Your email" {...field} />
                             </FormControl>
 
@@ -116,15 +123,13 @@ function ContactSection() {
                         )}
                       />
                     </div>
-                  </div>
 
-                  <div className="col-span-12">
                     <FormField
                       control={form.control}
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormControl className="border border-[hsl(var(--border))] focus-visible:ring-primary">
+                          <FormControl className="md:text-md border border-[hsl(var(--border))] shadow-none focus-visible:ring-primary">
                             <Textarea
                               rows={5}
                               placeholder="Message"
@@ -137,55 +142,21 @@ function ContactSection() {
                         </FormItem>
                       )}
                     />
-                  </div>
 
-                  <div className="col-span-12">
-                    <Button
-                      type="submit"
-                      className="w-[10rem] h-10 text-md btn-effect-2 rounded-full"
-                    >
-                      Submit
-                    </Button>
-                  </div>
-                </form>
-              </Form>
-            </Reveal>
-
-            <StaggerContainer className="flex flex-col gap-6">
-              {items.map((item, index) => {
-                const Icon = iconMap[item.icon]
-                return (
-                  <StaggerItem
-                    effect="fadeInRight"
-                    key={index}
-                    className="flex items-center gap-4"
-                  >
-                    <div className="w-12 h-12 p-2 bg-primary/10 dark:bg-primary/20 flex items-center justify-center rounded-full">
-                      <Icon className="size-5 text-primary" />
+                    <div className="flex justify-center">
+                      <Button
+                        type="submit"
+                        className="w-full lg:w-1/2 h-10 text-md btn-effect-2 rounded-full"
+                      >
+                        Submit
+                      </Button>
                     </div>
-                    <div className="about-complete-project">
-                      <h4 className="font-medium text-lg">{item.label}</h4>
-                      <p className="fw-400 secondary-black">
-                        <a href="#">{item.value}</a>
-                      </p>
-                    </div>
-                  </StaggerItem>
-                )
-              })}
-            </StaggerContainer>
-          </div>
+                  </form>
+                </Form>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-      </div>
-
-      <div className="absolute -z-1 top-0 right-0">
-        <Image
-          alt="Shape Images"
-          width={0}
-          height={0}
-          sizes="100vw"
-          src="/images/leafshape.png"
-          className="w-[15rem] sm:w-[25rem] h-auto object-contain"
-        />
       </div>
     </section>
   )

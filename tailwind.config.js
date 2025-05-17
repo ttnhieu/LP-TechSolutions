@@ -15,7 +15,7 @@ module.exports = {
         center: true, // căn giữa
         padding: '1rem', // padding hai bên
         screens: {
-          sm: '576px', // 576px
+          sm: '640px', // 640px
           md: '768px', // 768px
           lg: '1024px', // 1024px
           xl: '1280px', // 1280px
@@ -126,6 +126,9 @@ module.exports = {
         scrollX: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' }
+        },
+        'spin-slow': {
+          to: { transform: 'rotate(360deg)' }
         }
       },
       animation: {
@@ -136,7 +139,8 @@ module.exports = {
         'pulse-ring': 'pulse-ring 3s ease-in-out infinite',
         ripple: 'ripple 2.5s ease-out infinite',
         glow: 'glow 3s ease-out infinite',
-        scrollX: 'scrollX 60s linear infinite'
+        scrollX: 'scrollX 60s linear infinite',
+        'spin-slow': 'spin-slow 100s linear infinite'
       }
     }
   },

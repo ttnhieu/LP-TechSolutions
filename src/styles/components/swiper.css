@@ -1,0 +1,6 @@
+@layer components {
+  .custom-swiper .swiper-pagination {
+    position: unset;
+    margin-top: 1rem;
+  }
+}

@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { AlignJustifyIcon } from 'lucide-react'
+import { scrollSpy } from 'react-scroll'
 
 import {
   Sheet,
@@ -8,20 +10,30 @@ import {
   SheetTitle,
   SheetTrigger
 } from '@/components/ui/sheet'
-
 import { Accordion, AccordionItem } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
 
+import ScrollLink from '@/components/common/scroll-link'
+import LogoImage from '@/components/common/logo-image'
+import { useMenuItems } from '@/hooks/useMenuItems'
 import { cn } from '@/lib/utils'
-import LogoImage from '../common/logo-image'
-import { useNavigation } from '@/hooks/useNavigation'
-import { useState } from 'react'
 
 export default function MenuDrawer() {
   const [open, setOpen] = useState(false)
-  const { items, activeId, handleClick } = useNavigation()
+  const { items } = useMenuItems()
+
+  const handleOpenChange = (val: boolean) => {
+    setOpen(val)
+    if (val) {
+      // Gọi scrollSpy.update() sau 1 tick để chắc chắn DOM render xong
+      setTimeout(() => {
+        scrollSpy.update()
+      }, 100)
+    }
+  }
+
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
+    <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
         <Button
           variant="ghost"
@@ -49,17 +61,17 @@ export default function MenuDrawer() {
                 <AccordionItem
                   value={menu.title}
                   key={index}
-                  className={cn(
-                    'border-none rounded-md accordin-trigger px-4 py-2.5 text-base font-medium cursor-pointer hover:no-underline hover:bg-primary hover:text-white transition-all duration-300',
-                    menu.id === activeId &&
-                      'bg-primary text-white dark:bg-primary'
-                  )}
-                  onClick={() => {
-                    handleClick(menu.id)
-                    setOpen(false)
-                  }}
+                  className="border-none p-0 bg-transparent"
                 >
-                  {menu.title}
+                  <ScrollLink
+                    to={menu.id}
+                    label={menu.title}
+                    className={cn(
+                      'block w-full rounded-md px-4 py-2.5 text-base font-medium cursor-pointer hover:no-underline hover:bg-primary hover:text-white transition-all duration-300'
+                    )}
+                    activeClassName="bg-primary text-white dark:bg-primary"
+                    onClick={() => setOpen(false)}
+                  />
                 </AccordionItem>
               ))}
           </Accordion>

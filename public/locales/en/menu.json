@@ -11,8 +11,12 @@
       "title": "About"
     },
     {
-      "id": "optimazation",
-      "title": "Optimization"
+      "id": "technologies",
+      "title": "Technologies"
+    },
+    {
+      "id": "optimizations",
+      "title": "Optimizations"
     },
     {
       "id": "portfolio",
