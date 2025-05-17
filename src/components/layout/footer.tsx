@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 function Footer() {
   return (
-    <footer className="pt-[3rem] md:pt-[6rem] xl:pt-[10rem] relative overflow-hidden bg-hero">
+    <footer className="pt-[3rem] md:pt-[6rem] xl:pt-[10rem] 2xl:pt-[13rem] relative overflow-hidden bg-hero">
       <div className="absolute left-0 -top-[0.5rem] md:-top-[1.2rem] xl:-top-[3.5rem] w-full h-auto z-10">
         <Image
           alt="hero shape wave"
