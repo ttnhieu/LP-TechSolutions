@@ -54,7 +54,7 @@ function SectionHeader({
           <Wind className="size-5" />
         </span>
         <Reveal {...subTitleRevealProps}>
-          <h2 className="leading-6 md:leading-normal text-2xl sm:text-3xl md:text-4xl font-semibold ">
+          <h2 className="leading-6 md:leading-normal text-2xl sm:text-3xl md:text-4xl font-semibold">
             {/* {subTitle} */}
             <TranslatedText i18nKey="sub_title" ns={namespace} />
           </h2>
