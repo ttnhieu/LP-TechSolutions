@@ -11,6 +11,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-geist-sans)', 'sans-serif'],
+        mono: ['var(--font-geist-mono)', 'monospace'],
+        inter: ['var(--font-inter)', 'sans-serif']
+      },
       container: {
         center: true, // căn giữa
         padding: '1rem', // padding hai bên
