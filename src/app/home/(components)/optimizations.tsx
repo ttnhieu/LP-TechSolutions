@@ -35,7 +35,7 @@ function OptimizationsSection() {
 
         <div className="mx-auto max-w-lg lg:max-w-5xl">
           <div className="grid grid-cols-12 gap-4 lg:gap-6 justify-center items-center pt-10 md:pt-15">
-            <div className="col-span-12 xl:col-span-6">
+            <div className="col-span-12 lg:col-span-6">
               <StaggerContainer className="flex flex-col gap-4">
                 {Array.isArray(contentLeft) &&
                   contentLeft.map((item, index) => (
@@ -69,7 +69,7 @@ function OptimizationsSection() {
                   ))}
               </StaggerContainer>
             </div>
-            <div className="col-span-12 xl:col-span-6">
+            <div className="col-span-12 lg:col-span-6">
               <StaggerContainer className="flex flex-col gap-4">
                 {Array.isArray(contentRight) &&
                   contentRight.map((item, index) => (

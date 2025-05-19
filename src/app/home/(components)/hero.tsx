@@ -24,7 +24,7 @@ function HeroSection() {
     <section id="hero" className="relative">
       <div
         className={cn(
-          'relative pt-[2rem] md:pt-[5rem] lg:pt-[10rem] pb-[6rem] md:pb-[10rem] lg:pb-[15rem] flex items-start lg:items-center justify-center'
+          'relative pt-[2rem] md:pt-[5rem] lg:pt-[10rem] pb-[4rem] md:pb-[6rem] lg:pb-[15rem] flex items-start lg:items-center justify-center'
         )}
       >
         <div className="container relative z-10">
@@ -107,12 +107,12 @@ function HeroSection() {
             <div className="col-span-12 lg:col-span-6">
               <Reveal effect="zoomIn" once={true}>
                 <div className="relative">
-                  <div className="intro-thumb w-full h-[18rem] sm:h-[30rem] relative z-10">
+                  <div className="intro-thumb w-full h-[18rem] sm:h-[37rem] relative z-10">
                     <Image
                       fill
                       priority
                       alt="Hero Thumb"
-                      src="/images/illustrations/hero_mockup_2.svg"
+                      src="/images/illustrations/hero_mockup_2.png"
                       className="object-contain"
                     />
                   </div>

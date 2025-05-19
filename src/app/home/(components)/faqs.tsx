@@ -44,7 +44,7 @@ function FaqsSection() {
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent className="pt-4">
-                    <div className="font-mono text-sm/6">{item.ans}</div>
+                    <div className="text-sm/6">{item.ans}</div>
                   </CollapsibleContent>
                 </Collapsible>
               </StaggerItem>

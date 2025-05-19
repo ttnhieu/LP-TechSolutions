@@ -93,7 +93,7 @@ function TestimonialsSection() {
           height={0}
           sizes="100vw"
           alt="CircleShape1_3"
-          src="/images/shapes/bubbles.png"
+          src="/images/shapes/bubbles_dark.svg"
           className="w-[20rem] lg:w-[30rem] h-auto object-contain animate-spin-slow"
         />
       </div>

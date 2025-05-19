@@ -20,7 +20,7 @@ function PortfolioSection() {
   const { t } = useTranslation('portfolio')
   const [open, setOpen] = useState(false)
   const [slides, setSlides] = useState<GalleryInterface[]>([])
-  const [selectedType, setSelectedType] = useState<string>('all')
+  const [selectedType] = useState<string>('all')
 
   const items = t('items', { returnObjects: true }) as PorfolioInterface[]
   const tabs = t('tabs', { returnObjects: true }) as {
@@ -58,9 +58,7 @@ function PortfolioSection() {
               effect: 'fadeInLeft'
             }}
           />
-
           {/*
-          // MENU
           <div className="border-b border-gray-200 dark:border-gray-700">
             <ul
               className="flex flex-wrap justify-center -mb-px text-sm text-center"
