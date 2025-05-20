@@ -101,7 +101,7 @@ function ContactSection() {
                         render={({ field }) => (
                           <FormItem>
                             <FormControl className="md:text-md h-[3rem] border border-[hsl(var(--border))] shadow-none focus-visible:ring-primary">
-                              <Input placeholder="Your name" {...field} />
+                              <Input placeholder={t('form.name')} {...field} />
                             </FormControl>
 
                             <FormMessage />
@@ -115,7 +115,7 @@ function ContactSection() {
                         render={({ field }) => (
                           <FormItem className="">
                             <FormControl className="md:text-md h-[3rem] border border-[hsl(var(--border))] shadow-none focus-visible:ring-primary">
-                              <Input placeholder="Your email" {...field} />
+                              <Input placeholder={t('form.email')} {...field} />
                             </FormControl>
 
                             <FormMessage />
@@ -132,7 +132,7 @@ function ContactSection() {
                           <FormControl className="md:text-md border border-[hsl(var(--border))] shadow-none focus-visible:ring-primary">
                             <Textarea
                               rows={5}
-                              placeholder="Message"
+                              placeholder={t('form.message')}
                               {...field}
                               className="resize-none"
                             />

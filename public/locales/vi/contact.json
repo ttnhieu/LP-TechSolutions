@@ -36,5 +36,10 @@
   "thanks": {
     "title": "Cảm ơn bạn đã gửi!",
     "content": "Chúng tôi đã nhận được thông tin của bạn. \n Chúng tôi sẽ liên hệ trong thời gian sớm nhất."
+  },
+  "form": {
+    "name": "Tên của bạn",
+    "email": "Email của bạn",
+    "message": "Tin nhắn"
   }
 }

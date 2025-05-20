@@ -5,42 +5,42 @@
     {
       "title": "Thiết kế Web",
       "description": "Khi quyền lựa chọn của chúng ta không bị giới hạn và không có gì ngăn cản khả năng thực hiện điều đó",
-      "image_url": "/images/web-design.png"
+      "image_url": "/images/illustrations/web-design.png"
     },
     {
       "title": "Thiết kế Đồ họa",
       "description": "Khi quyền lựa chọn của chúng ta không bị giới hạn và không có gì ngăn cản khả năng thực hiện điều đó",
-      "image_url": "/images/design.png"
+      "image_url": "/images/illustrations/design.png"
     },
     {
       "title": "Phát triển Cá nhân",
       "description": "Khi quyền lựa chọn của chúng ta không bị giới hạn và không có gì ngăn cản khả năng thực hiện điều đó",
-      "image_url": "/images/personal.png"
+      "image_url": "/images/illustrations/personal.png"
     },
     {
       "title": "CNTT & Phần mềm",
       "description": "Khi quyền lựa chọn của chúng ta không bị giới hạn và không có gì ngăn cản khả năng thực hiện điều đó",
-      "image_url": "/images/server.png"
+      "image_url": "/images/illustrations/server.png"
     },
     {
       "title": "Tiếp thị & Bán hàng",
       "description": "Khi quyền lựa chọn của chúng ta không bị giới hạn và không có gì ngăn cản khả năng thực hiện điều đó",
-      "image_url": "/images/pantone.png"
+      "image_url": "/images/illustrations/pantone.png"
     },
     {
       "title": "Nghệ thuật & Nhân văn",
       "description": "Khi quyền lựa chọn của chúng ta không bị giới hạn và không có gì ngăn cản khả năng thực hiện điều đó",
-      "image_url": "/images/paint-palette.png"
+      "image_url": "/images/illustrations/paint-palette.png"
     },
     {
       "title": "Ứng dụng Di động",
       "description": "Khi quyền lựa chọn của chúng ta không bị giới hạn và không có gì ngăn cản khả năng thực hiện điều đó",
-      "image_url": "/images/smartphone.png"
+      "image_url": "/images/illustrations/smartphone.png"
     },
     {
       "title": "Tài chính & Kế toán",
       "description": "Khi quyền lựa chọn của chúng ta không bị giới hạn và không có gì ngăn cản khả năng thực hiện điều đó",
-      "image_url": "/images/infographic.png"
+      "image_url": "/images/illustrations/infographic.png"
     }
   ]
 }

@@ -36,5 +36,10 @@
   "thanks": {
     "title": "Thank you for submitting!",
     "content": "We have received your information. \n We will contact you as soon as possible."
+  },
+  "form": {
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Message"
   }
 }
